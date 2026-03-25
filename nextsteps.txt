@@ -1,0 +1,3 @@
+When you start the next session, a good opening message would be something like:
+> "Here is my nextsteps.md — I want to continue from where we left off. Today I'd like to deploy to Vercel / set up the contact form / update the content / etc."
+Pasting the file content (or telling me to read it from the path /home/marco/Desktop/projects/websites/ty/nextsteps.md) will give me all the context I need to pick up immediately without re-exploring the codebase.
