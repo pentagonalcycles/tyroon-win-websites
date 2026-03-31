@@ -111,11 +111,10 @@ export function HeroVideo({
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 lg:p-16">
-          <div className="mx-auto max-w-7xl">
+          <div className="max-w-7xl">
             <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-3xl leading-tight">
-              Highly Specialised,{" "}
-              <span className="text-accent">Highest Quality</span>{" "}
-              Representation
+              Connecting Excellence.{" "}
+              <span className="text-accent">Managing Brilliance.</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-0">
               Connecting you with specialist barristers who truly add value,
