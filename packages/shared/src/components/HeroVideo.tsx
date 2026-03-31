@@ -8,6 +8,7 @@ import { cn } from "../lib/utils";
 
 interface HeroVideoProps {
   image?: string;
+  videoSrc?: string;
 }
 
 const searchIndex = [
@@ -25,6 +26,7 @@ const searchIndex = [
 
 export function HeroVideo({
   image = "/images/tyroon-win.jpg",
+  videoSrc,
 }: HeroVideoProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<typeof searchIndex>([]);
@@ -78,7 +80,21 @@ export function HeroVideo({
   return (
     <section className="relative">
       <div className="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
-        {!imageError && image ? (
+        {videoSrc ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source
+              src={videoSrc.replace(/\.(mp4|mov)$/, ".hevc.mp4")}
+              type='video/mp4; codecs="hvc1"'
+            />
+            <source src={videoSrc.replace(/\.mov$/, ".mp4")} type="video/mp4" />
+          </video>
+        ) : !imageError && image ? (
           <Image
             src={image}
             alt="Barristers Chambers"
