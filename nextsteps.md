@@ -2,26 +2,56 @@
 
 ## Current Status (April 2, 2026)
 
-### Changes Applied — Client Feedback (Mr Ty) — barristersclerk.co.uk only
+All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
 
-- **Page headings**: All inner-page hero headings (`PageHero` component with `darkHeading` prop) changed to dark green (`text-green-900`) on existing burgundy background
-- **TopBar navigation**: "Practice Managers" link renamed to "Clerks & Practice Managers"; visible "Menu" label added above hamburger icon; "Home" link added
-- **Footer (barristersclerk only)**: Added disclaimer text above copyright bar: _"Barrister's Clerk" provides administrative, marketing, and clerical support services…_; added links for Privacy Policy, Cookie Policy, Fees; "Contact us" text added bottom-right; "Collaborate with us" removed
-- **Public Access page (barristersclerk)**: Added download link for `Public-Access-Guidance-for-Lay-Clients.pdf`
-- **Licensed Access page (barristersclerk)**: Added download links for `Licensed-access-terms-of-work.pdf` and `Licensed-Access-Guidance.pdf`
-- **Lawyers page (barristersclerk)**: Added "Standard Documents" section with download links for `Standard-Contractual-Terms-2020.pdf` and `Contractual-Terms-Explanation.pdf`
+### Navigation & Layout
 
-### PDFs — Deployed
+- **TopBar**: "Practice Managers" renamed to "Clerks & Practice Managers"; "Home" link added; visible "Menu" label added above hamburger icon
+- **Page headings**: All inner-page `PageHero` headings use `darkHeading` prop — dark green (`text-green-900`) on burgundy background (barristersclerk only; taxclerk keeps white headings)
+- **Footer**: Disclaimer text added above copyright bar; Cookie Policy, Fees links added; "Contact us" text at bottom-right; "Collaborate with us" removed; Legal section in footer columns now includes Cookie Policy, Terms & Conditions, Complaints Information
 
-All 5 PDF files are deployed and live in `apps/barristersclerk/public/`:
+### Pages Updated
 
-| File                                         | Size  |
-| -------------------------------------------- | ----- |
-| `Public-Access-Guidance-for-Lay-Clients.pdf` | 169KB |
-| `Licensed-access-terms-of-work.pdf`          | 330KB |
-| `Licensed-Access-Guidance.pdf`               | 250KB |
-| `Standard-Contractual-Terms-2020.pdf`        | 260KB |
-| `Contractual-Terms-Explanation.pdf`          | 661KB |
+- **`/barristers`**: Full bios for Simon Jelf (Partnership & LLP) and Stefano Mariani (Tax), with real photos (`SimonJelf.jpg`, `StefanoMariani.png`)
+- **`/tax`**: Expanded with full Tax Specialist Areas (6 categories) and Hong Kong Tax & Trusts section
+- **`/partnership`**: Already had full content from earlier session
+- **`/work-with-us`**: Expanded with collaboration model for freelance clerks and barristers/sole practitioners
+- **`/privacy`**: Updated to new privacy notice content from client document
+- **`/public-access`**: Download link for `Public-Access-Guidance-for-Lay-Clients.pdf`
+- **`/licensed-access`**: Download links for `Licensed-access-terms-of-work.pdf` and `Licensed-Access-Guidance.pdf`
+- **`/lawyers`**: Standard Documents section with download links for `Standard-Contractual-Terms-2020.pdf` and `Contractual-Terms-Explanation.pdf`
+
+### New Pages Created
+
+- **`/complaints`**: Full 12-step complaints procedure with Legal Ombudsman and BSB contact details; download link for BSB First-Tier Complaints Handling Guidance PDF
+- **`/cookie-policy`**: Full cookie policy
+- **`/terms`**: Full Terms & Conditions (15 sections)
+
+### PDFs — All Deployed
+
+All PDF files live in `apps/barristersclerk/public/`:
+
+| File                                          | Size  | Page               |
+| --------------------------------------------- | ----- | ------------------ |
+| `Public-Access-Guidance-for-Lay-Clients.pdf`  | 169KB | `/public-access`   |
+| `Licensed-access-terms-of-work.pdf`           | 330KB | `/licensed-access` |
+| `Licensed-Access-Guidance.pdf`                | 250KB | `/licensed-access` |
+| `Standard-Contractual-Terms-2020.pdf`         | 260KB | `/lawyers`         |
+| `Contractual-Terms-Explanation.pdf`           | 661KB | `/lawyers`         |
+| `First-tier-complaints-handling-guidance.pdf` | 270KB | `/complaints`      |
+
+### Images
+
+- `SimonJelf.jpg` (6.7KB) — barrister photo, `/barristers`
+- `StefanoMariani.png` (50KB) — barrister photo, `/barristers`
+
+### Pending Tasks
+
+- [ ] Wire up contact form email delivery (Resend or similar) — `RESEND_API_KEY` env var needed in Vercel
+- [ ] Add specific fee rates to `/fees` page when agreed
+- [ ] Add Google Analytics tracking
+- [ ] Submit sitemaps to Google Search Console
+- [ ] Mobile responsiveness testing
 
 ---
 
@@ -59,39 +89,14 @@ ty/
 └── turbo.json
 ```
 
-## Pending Tasks
-
-### High Priority
-
-- [ ] Review the redesigned barristersclerk site on localhost:3000
-- [ ] Apply similar aesthetic/updates to taxclerk site if desired
-- [ ] Add real barrister profiles to `/barristers` page
-- [ ] Add specific fee rates to `/fees` page
-- [ ] Wire up contact form email delivery (Resend or similar)
-
-### Medium Priority
-
-- [ ] Add Google Analytics tracking
-- [ ] Submit sitemaps to Google Search Console
-- [ ] SEO optimization verification
-- [ ] Mobile responsiveness testing
-
-### Low Priority
-
-- [ ] Performance optimization and Lighthouse audit
-- [ ] Add subtle animations if not already present
-- [ ] Review all page content for accuracy
-
 ## Deployment Checklist
 
-- [ ] Push code to GitHub
-- [ ] Create two Vercel projects (one per app, same repo)
-- [ ] Configure root directories: `apps/barristersclerk` and `apps/taxclerk`
-- [ ] Add custom domains: barristersclerk.co.uk and taxclerk.co.uk
-- [ ] Update DNS records at domain registrar
+- [x] Push code to GitHub
+- [x] Create two Vercel projects (one per app, same repo)
+- [x] Configure root directories: `apps/barristersclerk` and `apps/taxclerk`
+- [x] Add custom domains: barristersclerk.co.uk and taxclerk.co.uk
 - [ ] Set up RESEND_API_KEY environment variable for contact forms
 - [ ] Test contact forms on live domains
-- [ ] Verify SSL certificates
 
 ## Design Reference
 
