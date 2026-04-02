@@ -20,6 +20,7 @@ export default function PublicAccessPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="For Members of the Public"
         subtitle="Public Access Scheme"
         description="Speak directly to a barrister where appropriate."

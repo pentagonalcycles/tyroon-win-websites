@@ -21,6 +21,7 @@ export default function LicensedAccessPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="For Licensed Access Clients"
         subtitle="Accountants and Professionals"
         description="Direct access to specialist barristers, without unnecessary layers."

@@ -196,13 +196,15 @@ export function Footer({ site }: FooterProps) {
 
       <div className={`border-t ${config.borderClass}`}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-          <p className="text-xs text-white/60 leading-relaxed mb-4 max-w-3xl">
-            &ldquo;Barrister&apos;s Clerk&rdquo; provides administrative,
-            marketing, and clerical support services. We are not barristers, a
-            barrister&apos;s chambers or law firm and do not provide legal
-            advice, and do not conduct litigation. We help you connect with a
-            specialist barrister.
-          </p>
+          {site === "barristersclerk" && (
+            <p className="text-xs text-white/60 leading-relaxed mb-4 max-w-3xl">
+              &ldquo;Barrister&apos;s Clerk&rdquo; provides administrative,
+              marketing, and clerical support services. We are not barristers, a
+              barrister&apos;s chambers or law firm and do not provide legal
+              advice, and do not conduct litigation. We help you connect with a
+              specialist barrister.
+            </p>
+          )}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/50">
               <p>
@@ -216,31 +218,39 @@ export function Footer({ site }: FooterProps) {
               >
                 Privacy Policy
               </Link>
-              <span className="hidden sm:inline text-white/30">|</span>
-              <Link
-                href="/cookie-policy"
-                className={`${config.linkClass} transition-colors`}
-              >
-                Cookie Policy
-              </Link>
-              <span className="hidden sm:inline text-white/30">|</span>
-              <Link
-                href="/fees"
-                className={`${config.linkClass} transition-colors`}
-              >
-                Fees
-              </Link>
-              <span className="hidden sm:inline text-white/30">|</span>
-              <Link
-                href="/work-with-us"
-                className={`${config.linkClass} transition-colors`}
-              >
-                Collaborate with us
-              </Link>
+              {site === "barristersclerk" && (
+                <>
+                  <span className="hidden sm:inline text-white/30">|</span>
+                  <Link
+                    href="/cookie-policy"
+                    className={`${config.linkClass} transition-colors`}
+                  >
+                    Cookie Policy
+                  </Link>
+                  <span className="hidden sm:inline text-white/30">|</span>
+                  <Link
+                    href="/fees"
+                    className={`${config.linkClass} transition-colors`}
+                  >
+                    Fees
+                  </Link>
+                  <span className="hidden sm:inline text-white/30">|</span>
+                  <Link
+                    href="/work-with-us"
+                    className={`${config.linkClass} transition-colors`}
+                  >
+                    Collaborate with us
+                  </Link>
+                </>
+              )}
             </div>
-            <p className="text-xs text-white/50 shrink-0">
-              {config.domain} &nbsp;&bull;&nbsp; Contact us
-            </p>
+            {site === "barristersclerk" ? (
+              <p className="text-xs text-white/50 shrink-0">
+                {config.domain} &nbsp;&bull;&nbsp; Contact us
+              </p>
+            ) : (
+              <p className="text-xs text-white/50">{config.domain}</p>
+            )}
           </div>
         </div>
       </div>

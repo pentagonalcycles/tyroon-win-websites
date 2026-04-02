@@ -51,8 +51,8 @@ export default function LicensedAccessPage() {
                   suited to your client and the issue.
                 </p>
 
-                <div className="rounded-xl bg-cream border border-accent/20 p-6 space-y-3">
-                  <p className="text-sm text-gray-700">
+                <div className="rounded-xl bg-cream border border-accent/20 p-6">
+                  <p className="text-sm text-gray-700 mb-3">
                     Please see the Bar Council information about Licensed Access
                     here:
                   </p>
@@ -65,25 +65,6 @@ export default function LicensedAccessPage() {
                     <span>Licensed Access Recognition Regulations</span>
                     <ExternalLink className="h-4 w-4" />
                   </a>
-                  <div className="pt-2 border-t border-gray-200 space-y-2">
-                    <p className="text-sm text-gray-700 mb-2">
-                      Download documents:
-                    </p>
-                    <a
-                      href="/Licensed-access-terms-of-work.pdf"
-                      download
-                      className="flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
-                    >
-                      <span>License Access Terms of Work (PDF)</span>
-                    </a>
-                    <a
-                      href="/Licensed-Access-Guidance.pdf"
-                      download
-                      className="flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
-                    >
-                      <span>Licensed Access Guidance (PDF)</span>
-                    </a>
-                  </div>
                 </div>
 
                 <p className="text-gray-700 leading-relaxed font-medium">

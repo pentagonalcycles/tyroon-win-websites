@@ -43,6 +43,7 @@ export default function WorkWithUsPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="Work With Us"
         subtitle="For Barristers"
         description="Are you a barrister looking for professional clerking?"

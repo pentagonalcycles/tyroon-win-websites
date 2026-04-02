@@ -13,6 +13,7 @@ export default function BarristersPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="Our Barristers"
         subtitle="Specialist Counsel"
         description="A select group of experienced barristers in partnership and tax matters."

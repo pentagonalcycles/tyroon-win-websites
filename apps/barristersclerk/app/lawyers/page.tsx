@@ -21,6 +21,7 @@ export default function LawyersPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="For Lawyers and Law Firms"
         subtitle="Professional Instruction"
         description="Instruct the right counsel. Quickly and with certainty."

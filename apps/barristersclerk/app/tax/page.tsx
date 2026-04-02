@@ -15,6 +15,7 @@ export default function TaxPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title={tc.title}
         subtitle="Practice Area"
         description="When challenging an HMRC decision, experienced representation makes all the difference."

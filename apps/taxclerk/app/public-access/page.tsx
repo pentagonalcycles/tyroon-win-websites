@@ -46,8 +46,8 @@ export default function PublicAccessPage() {
                 </h2>
                 <CheckList items={whatIWillDo} />
 
-                <div className="rounded-xl bg-cream border border-accent/20 p-6 space-y-3">
-                  <p className="text-sm text-gray-700">
+                <div className="rounded-xl bg-cream border border-accent/20 p-6">
+                  <p className="text-sm text-gray-700 mb-3">
                     Please see the following guidance on Public Access for lay
                     clients on the Bar Standards Board website:
                   </p>
@@ -62,18 +62,6 @@ export default function PublicAccessPage() {
                     </span>
                     <ExternalLink className="h-4 w-4" />
                   </a>
-                  <div className="pt-2 border-t border-gray-200">
-                    <p className="text-sm text-gray-700 mb-2">
-                      Download guidance:
-                    </p>
-                    <a
-                      href="/Public-Access-Guidance-for-Lay-Clients.pdf"
-                      download
-                      className="inline-flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
-                    >
-                      <span>Public Access Guidance for Lay Clients (PDF)</span>
-                    </a>
-                  </div>
                 </div>
 
                 <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">

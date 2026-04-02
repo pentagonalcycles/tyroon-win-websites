@@ -51,6 +51,7 @@ export default function PartnershipPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="Partnership & LLP Expertise"
         subtitle="Practice Area"
         description="Connecting clients with barristers specialising in partnership and LLP law."

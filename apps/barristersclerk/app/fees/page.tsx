@@ -28,6 +28,7 @@ export default function FeesPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="Fees"
         subtitle="Transparent Pricing"
         description="Clear, upfront information on barrister fees with no hidden charges."

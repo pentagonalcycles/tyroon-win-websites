@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 import { PageHero, Section, Container, CheckList } from "@tyroon/shared";
 
 export const metadata: Metadata = {
@@ -51,38 +50,6 @@ export default function LawyersPage() {
                 <p className="text-gray-700 leading-relaxed">
                   Get in touch to discuss your matter or check availability.
                 </p>
-
-                <div className="rounded-xl bg-cream border border-accent/20 p-6 space-y-3">
-                  <h3 className="font-heading text-base font-semibold text-gray-900">
-                    Standard Documents
-                  </h3>
-                  <p className="text-sm text-gray-700">
-                    The following documents govern the terms on which barristers
-                    provide legal services to authorised persons:
-                  </p>
-                  <div className="space-y-2">
-                    <a
-                      href="/Standard-Contractual-Terms-2020.pdf"
-                      download
-                      className="flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
-                    >
-                      <span>
-                        The Standard Contractual Terms for the Supply of Legal
-                        Services by Barristers to Authorised Persons 2020 (PDF)
-                      </span>
-                    </a>
-                    <a
-                      href="/Contractual-Terms-Explanation.pdf"
-                      download
-                      className="flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
-                    >
-                      <span>
-                        Guide to Standard Conditions of Contract — Explanation
-                        (PDF)
-                      </span>
-                    </a>
-                  </div>
-                </div>
 
                 <div className="pt-4">
                   <Link

@@ -12,6 +12,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="Contact"
         subtitle="Get in Touch"
         description="I am happy to have an initial conversation to discuss your options."

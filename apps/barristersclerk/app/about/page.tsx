@@ -33,6 +33,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
+        darkHeading
         title="About Me"
         subtitle="Tyroon Win"
         description="Over 20 years' experience in the legal sector, connecting clients with the right specialist counsel."
