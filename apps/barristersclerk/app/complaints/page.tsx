@@ -74,11 +74,20 @@ export default function ComplaintsPage() {
           <div className="max-w-4xl mx-auto space-y-10">
             {/* Intro */}
             <div>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-4">
                 We take all complaints seriously and aim to resolve them quickly
                 and fairly. Our complaints procedure follows the guidance issued
                 by the Bar Standards Board and the Bar Council.
               </p>
+              <a
+                href="/First-tier-complaints-handling-guidance.pdf"
+                download
+                className="inline-flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
+              >
+                <span>
+                  Download: First-Tier Complaints Handling Guidance (PDF, BSB)
+                </span>
+              </a>
             </div>
 
             {/* Steps */}
