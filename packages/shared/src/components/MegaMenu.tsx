@@ -18,13 +18,7 @@ interface MegaMenuProps {
 const menuData: MenuItem[] = [
   {
     label: "Barristers",
-    children: [
-      { label: "All Barristers", href: "/barristers" },
-      { label: "King's Counsel", href: "/barristers?type=kc" },
-      { label: "Junior Counsel", href: "/barristers?type=junior" },
-      { label: "Arbitrators", href: "/barristers?type=arbitrator" },
-      { label: "Mediators", href: "/barristers?type=mediator" },
-    ],
+    href: "/barristers",
   },
   {
     label: "Practice Areas",
