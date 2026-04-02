@@ -147,6 +147,30 @@ export function Footer({ site }: FooterProps) {
                     Privacy Policy
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/cookie-policy"
+                    className={`text-sm ${config.linkClass} transition-colors`}
+                  >
+                    Cookie Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/terms"
+                    className={`text-sm ${config.linkClass} transition-colors`}
+                  >
+                    Terms &amp; Conditions
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/complaints"
+                    className={`text-sm ${config.linkClass} transition-colors`}
+                  >
+                    Complaints Information
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

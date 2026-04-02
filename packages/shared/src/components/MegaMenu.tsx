@@ -79,6 +79,15 @@ const menuData: MenuItem[] = [
     label: "Contact",
     href: "/contact",
   },
+  {
+    label: "Legal",
+    children: [
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Cookie Policy", href: "/cookie-policy" },
+      { label: "Terms & Conditions", href: "/terms" },
+      { label: "Complaints", href: "/complaints" },
+    ],
+  },
 ];
 
 export function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
