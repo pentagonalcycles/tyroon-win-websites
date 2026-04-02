@@ -234,13 +234,6 @@ export function Footer({ site }: FooterProps) {
                   >
                     Fees
                   </Link>
-                  <span className="hidden sm:inline text-white/30">|</span>
-                  <Link
-                    href="/work-with-us"
-                    className={`${config.linkClass} transition-colors`}
-                  >
-                    Collaborate with us
-                  </Link>
                 </>
               )}
             </div>
