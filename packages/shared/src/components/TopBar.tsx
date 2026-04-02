@@ -6,6 +6,7 @@ import { Menu, X, Mail } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
 
 const barristersclerkLinks = [
+  { label: "Home", href: "/" },
   { label: "Barristers", href: "/barristers" },
   { label: "Clerks & Practice Managers", href: "/lawyers" },
 ];
