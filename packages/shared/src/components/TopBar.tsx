@@ -7,7 +7,7 @@ import { MegaMenu } from "./MegaMenu";
 
 const barristersclerkLinks = [
   { label: "Barristers", href: "/barristers" },
-  { label: "Practice Managers", href: "/lawyers" },
+  { label: "Clerks & Practice Managers", href: "/lawyers" },
 ];
 
 export function TopBar() {
@@ -79,12 +79,12 @@ export function TopBar() {
                 )}
               </button>
               <button
-                className="hidden lg:flex items-center justify-center w-10 h-10 bg-primary-light/50 rounded-md text-white hover:bg-accent hover:text-primary transition-colors"
+                className="hidden lg:flex flex-col items-center justify-center gap-1 px-3 py-2 bg-primary-light/50 rounded-md text-white hover:bg-accent hover:text-primary transition-colors"
                 onClick={toggleMenu}
                 aria-label="Toggle menu"
                 aria-expanded={isMenuOpen}
               >
-                <span className="sr-only">Menu</span>
+                <span className="text-xs font-medium leading-none">Menu</span>
                 <div className="w-5 flex flex-col space-y-1.5">
                   <span
                     className={`block h-0.5 bg-current transform transition-transform ${

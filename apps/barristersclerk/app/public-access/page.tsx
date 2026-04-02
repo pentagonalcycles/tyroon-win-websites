@@ -1,19 +1,19 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ExternalLink } from 'lucide-react';
-import { PageHero, Section, Container, CheckList } from '@tyroon/shared';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+import { PageHero, Section, Container, CheckList } from "@tyroon/shared";
 
 export const metadata: Metadata = {
-  title: 'For Members of the Public',
+  title: "For Members of the Public",
   description:
-    'You may be able to instruct a barrister directly without a solicitor under the Public Access Scheme. Faster, more cost-effective, and straightforward.',
+    "You may be able to instruct a barrister directly without a solicitor under the Public Access Scheme. Faster, more cost-effective, and straightforward.",
 };
 
 const whatIWillDo = [
-  'Explain how Public Access works in simple terms',
-  'Help you identify the right barrister for your situation',
-  'Provide clear information on fees and next steps',
-  'Ensure the process is straightforward and manageable',
+  "Explain how Public Access works in simple terms",
+  "Help you identify the right barrister for your situation",
+  "Provide clear information on fees and next steps",
+  "Ensure the process is straightforward and manageable",
 ];
 
 export default function PublicAccessPage() {
@@ -31,12 +31,14 @@ export default function PublicAccessPage() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
               <div className="lg:col-span-3 space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  In many cases, you can instruct a barrister without going through a solicitor.
-                  This can be faster and more cost-effective, particularly for advice or discrete
-                  pieces of work.
+                  In many cases, you can instruct a barrister without going
+                  through a solicitor. This can be faster and more
+                  cost-effective, particularly for advice or discrete pieces of
+                  work.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  I will guide you through whether this route is suitable for you.
+                  I will guide you through whether this route is suitable for
+                  you.
                 </p>
 
                 <h2 className="font-heading text-2xl font-semibold text-gray-900">
@@ -44,10 +46,11 @@ export default function PublicAccessPage() {
                 </h2>
                 <CheckList items={whatIWillDo} />
 
-                <div className="rounded-xl bg-cream border border-accent/20 p-6">
-                  <p className="text-sm text-gray-700 mb-3">
-                    Please see the following guidance on Public Access for lay clients on the
-                    Bar Standards Board website for further information:
+                <div className="rounded-xl bg-cream border border-accent/20 p-6 space-y-3">
+                  <p className="text-sm text-gray-700">
+                    Please see the following guidance on Public Access for lay
+                    clients on the Bar Standards Board website for further
+                    information:
                   </p>
                   <a
                     href="https://www.barstandardsboard.org.uk/for-the-public/going-to-court/public-access-guidance-for-lay-clients.html"
@@ -55,16 +58,32 @@ export default function PublicAccessPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
                   >
-                    <span>Bar Standards Board Public Access Guidance for Lay Clients</span>
+                    <span>
+                      Bar Standards Board Public Access Guidance for Lay Clients
+                    </span>
                     <ExternalLink className="h-4 w-4" />
                   </a>
+                  <div className="pt-2 border-t border-gray-200">
+                    <p className="text-sm text-gray-700 mb-2">
+                      Download guidance:
+                    </p>
+                    <a
+                      href="/Public-Access-Guidance-for-Lay-Clients.pdf"
+                      download
+                      className="inline-flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
+                    >
+                      <span>Public Access Guidance for Lay Clients (PDF)</span>
+                    </a>
+                  </div>
                 </div>
 
                 <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
                   <p className="text-sm text-gray-700">
-                    <span className="font-semibold text-amber-800">Please note: </span>
-                    If your matter requires a solicitor, I will tell you early and can suggest
-                    suitable options.
+                    <span className="font-semibold text-amber-800">
+                      Please note:{" "}
+                    </span>
+                    If your matter requires a solicitor, I will tell you early
+                    and can suggest suitable options.
                   </p>
                 </div>
 

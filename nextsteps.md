@@ -1,8 +1,39 @@
 # Next Steps
 
+## Current Status (April 2, 2026)
+
+### Changes Applied — Client Feedback (Mr Ty)
+
+- **Page headings**: All inner-page hero headings (`PageHero` component) changed to dark green (`text-green-900`) on existing burgundy background
+- **TopBar navigation**: "Practice Managers" link renamed to "Clerks & Practice Managers"; visible "Menu" label added above hamburger icon
+- **Footer (both sites)**: Added disclaimer text above copyright bar on every page: _"Barrister's Clerk" provides administrative, marketing, and clerical support services…_; added links for Cookie Policy, Fees, Collaborate with us; "Contact us" text added bottom-right
+- **Public Access pages (both sites)**: Added download link for `Public-Access-Guidance-for-Lay-Clients.pdf` — drop the real PDF into `apps/barristersclerk/public/` and `apps/taxclerk/public/`
+- **Licensed Access pages (both sites)**: Added download links for `Licensed-access-terms-of-work.pdf` and `Licensed-Access-Guidance.pdf` — drop real PDFs into both `public/` directories
+- **Lawyers pages (both sites)**: Added "Standard Documents" section with download links for `Standard-Contractual-Terms-2020.pdf` and `Contractual-Terms-Explanation.pdf` — drop real PDFs into both `public/` directories
+
+### PDFs — Action Required
+
+Placeholder (empty) PDF files have been committed. Replace them with the real files using these exact filenames:
+
+| File                                         | Pages           |
+| -------------------------------------------- | --------------- |
+| `Public-Access-Guidance-for-Lay-Clients.pdf` | Public Access   |
+| `Licensed-access-terms-of-work.pdf`          | Licensed Access |
+| `Licensed-Access-Guidance.pdf`               | Licensed Access |
+| `Standard-Contractual-Terms-2020.pdf`        | Lawyers         |
+| `Contractual-Terms-Explanation.pdf`          | Lawyers         |
+
+Place each file in **both** `apps/barristersclerk/public/` and `apps/taxclerk/public/`.
+
+---
+
+## Previous Status (March 25, 2026)
+
+The barristersclerk.co.uk site has been redesigned with a Devereux Chambers-inspired aesthetic. The redesign introduces a more refined, professional look appropriate for a legal services business.
+
 ## Viewing the Sites Locally
 
-Both websites are available on your local machine right now. Run the dev servers from the project root:
+Both websites are available on your local machine. Run the dev servers from the project root:
 
 ```bash
 cd /home/marco/Desktop/projects/websites/ty
@@ -11,23 +42,17 @@ pnpm dev
 
 Then open in your browser:
 
-| Site | URL |
-|------|-----|
+| Site                  | URL                   |
+| --------------------- | --------------------- |
 | barristersclerk.co.uk | http://localhost:3000 |
-| taxclerk.co.uk | http://localhost:3001 |
+| taxclerk.co.uk        | http://localhost:3001 |
 
-Both sites compile and serve automatically. Any file changes are reflected instantly without restarting.
-
-To stop the dev servers, press `Ctrl+C` in the terminal.
-
----
-
-## Project Structure Recap
+## Project Structure
 
 ```
 ty/
 ├── apps/
-│   ├── barristersclerk/    ← barristersclerk.co.uk
+│   ├── barristersclerk/    ← barristersclerk.co.uk (redesigned)
 │   └── taxclerk/           ← taxclerk.co.uk
 ├── packages/
 │   └── shared/             ← Shared components, content, types
@@ -36,179 +61,46 @@ ty/
 └── turbo.json
 ```
 
-All shared components (Navbar, Footer, Hero, forms, etc.) live in `packages/shared/src/`. Changes there affect both sites simultaneously.
+## Pending Tasks
 
----
+### High Priority
 
-## Deploying to Vercel
+- [ ] Review the redesigned barristersclerk site on localhost:3000
+- [ ] Apply similar aesthetic/updates to taxclerk site if desired
+- [ ] Add real barrister profiles to `/barristers` page
+- [ ] Add specific fee rates to `/fees` page
+- [ ] Wire up contact form email delivery (Resend or similar)
 
-### Step 1 – Push to GitHub
+### Medium Priority
 
-Create a new GitHub repository and push the entire project:
+- [ ] Add Google Analytics tracking
+- [ ] Submit sitemaps to Google Search Console
+- [ ] SEO optimization verification
+- [ ] Mobile responsiveness testing
 
-```bash
-cd /home/marco/Desktop/projects/websites/ty
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
-```
+### Low Priority
 
-### Step 2 – Create Vercel Project for barristersclerk.co.uk
+- [ ] Performance optimization and Lighthouse audit
+- [ ] Add subtle animations if not already present
+- [ ] Review all page content for accuracy
 
-1. Go to [vercel.com](https://vercel.com) and click **Add New Project**
-2. Import your GitHub repository
-3. Under **Configure Project**, set:
-   - **Framework Preset:** Next.js
-   - **Root Directory:** `apps/barristersclerk`
-   - Leave Build Command and Output Directory as defaults (the `vercel.json` inside that folder handles it)
-4. Click **Deploy**
+## Deployment Checklist
 
-### Step 3 – Create Vercel Project for taxclerk.co.uk
-
-Repeat the process from the same GitHub repository:
-
-1. **Add New Project** → import the same repository again
-2. Set **Root Directory:** `apps/taxclerk`
-3. Click **Deploy**
-
-### Step 4 – Add Custom Domains
-
-For each Vercel project:
-
-1. Go to **Project Settings → Domains**
-2. Add the domain (e.g. `barristersclerk.co.uk` and `www.barristersclerk.co.uk`)
-3. Vercel will give you DNS records to add at your domain registrar:
-   - **A record:** `@` → Vercel IP address (shown in dashboard)
-   - **CNAME record:** `www` → `cname.vercel-dns.com`
-4. SSL certificates are provisioned automatically — no manual steps needed
-
----
-
-## Wiring Up the Contact Form (Email Delivery)
-
-Currently, contact form submissions are logged to the server console but no email is sent. To enable email delivery, the recommended approach is [Resend](https://resend.com) (free tier available).
-
-### Step 1 – Sign up at resend.com and get an API key
-
-### Step 2 – Install Resend in both apps
-
-```bash
-cd /home/marco/Desktop/projects/websites/ty
-pnpm add resend --filter=barristersclerk --filter=taxclerk
-```
-
-### Step 3 – Update the API route in each app
-
-Open `apps/barristersclerk/app/api/contact/route.ts` and uncomment the Resend block (there is a ready-made comment showing exactly what to add). Do the same in `apps/taxclerk/app/api/contact/route.ts`.
-
-### Step 4 – Add the environment variable in Vercel
-
-In each Vercel project, go to **Settings → Environment Variables** and add:
-
-```
-RESEND_API_KEY = re_xxxxxxxxxxxx
-```
-
-Redeploy for the variable to take effect.
-
----
-
-## Content Updates
-
-### Updating page text
-
-All page content is written directly in each page file. For example:
-
-- Homepage headline: `apps/barristersclerk/app/page.tsx`
-- About page bio: `apps/barristersclerk/app/about/page.tsx`
-- Tax content (shared between both sites): `packages/shared/src/content/tax/tax-appeals.ts`
-- Testimonials (shared): `packages/shared/src/content/testimonials.ts`
-
-### Adding real barrister profiles
-
-The `/barristers` page currently shows 6 placeholder cards. When you are ready to add real profiles, edit `apps/barristersclerk/app/barristers/page.tsx` and replace the `Array.from({ length: 6 })` placeholder grid with real data.
-
-### Adding fee figures
-
-The `/fees` page currently describes fee categories without specific rates. When you are ready to publish rates, add them in `apps/barristersclerk/app/fees/page.tsx` and `apps/taxclerk/app/fees/page.tsx`.
-
----
-
-## Adding Google Analytics
-
-Once the sites are live, add tracking by installing the Next.js third-parties package:
-
-```bash
-pnpm add @next/third-parties --filter=barristersclerk --filter=taxclerk
-```
-
-Then add to each `app/layout.tsx`:
-
-```tsx
-import { GoogleAnalytics } from '@next/third-parties/google';
-// Inside <body>:
-<GoogleAnalytics gaId="G-XXXXXXXXXX" />
-```
-
-Set your Measurement ID in Vercel as an environment variable:
-
-```
-NEXT_PUBLIC_GA_ID = G-XXXXXXXXXX
-```
-
----
-
-## Submitting to Google Search Console
-
-After the domains are live:
-
-1. Go to [search.google.com/search-console](https://search.google.com/search-console)
-2. Add both properties (`barristersclerk.co.uk` and `taxclerk.co.uk`)
-3. Verify ownership via DNS TXT record (Vercel makes this straightforward)
-4. Submit sitemaps:
-   - `https://barristersclerk.co.uk/sitemap.xml`
-   - `https://taxclerk.co.uk/sitemap.xml`
-
----
-
-## Ongoing Maintenance
-
-### Running a production build locally
-
-```bash
-pnpm build
-```
-
-This builds both sites in parallel and will catch any TypeScript or build errors before pushing.
-
-### Keeping dependencies updated
-
-```bash
-pnpm update --recursive --latest
-pnpm build   # verify nothing broke
-```
-
-### Running only one site in dev
-
-```bash
-pnpm dev --filter=barristersclerk   # port 3000 only
-pnpm dev --filter=taxclerk          # port 3001 only
-```
-
----
-
-## Summary Checklist
-
-- [ ] View sites locally at http://localhost:3000 and http://localhost:3001
-- [ ] Review all page content and adjust any copy as needed
-- [ ] Add barrister profile photos and bios when available
-- [ ] Add specific fee rates when ready to publish them
 - [ ] Push code to GitHub
 - [ ] Create two Vercel projects (one per app, same repo)
-- [ ] Add custom domains in Vercel and update DNS at registrar
-- [ ] Set up Resend (or another email provider) and add `RESEND_API_KEY`
+- [ ] Configure root directories: `apps/barristersclerk` and `apps/taxclerk`
+- [ ] Add custom domains: barristersclerk.co.uk and taxclerk.co.uk
+- [ ] Update DNS records at domain registrar
+- [ ] Set up RESEND_API_KEY environment variable for contact forms
 - [ ] Test contact forms on live domains
-- [ ] Add Google Analytics
-- [ ] Submit sitemaps to Google Search Console
+- [ ] Verify SSL certificates
+
+## Design Reference
+
+The barristersclerk redesign uses a Devereux Chambers-inspired aesthetic:
+
+- Professional, refined color palette
+- Typography suited for legal services
+- Clean layout emphasizing trust and expertise
+
+See `redesign-plan.md` for full design documentation.

@@ -1,20 +1,20 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ExternalLink } from 'lucide-react';
-import { PageHero, Section, Container, CheckList } from '@tyroon/shared';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+import { PageHero, Section, Container, CheckList } from "@tyroon/shared";
 
 export const metadata: Metadata = {
-  title: 'For Licensed Access Clients',
+  title: "For Licensed Access Clients",
   description:
-    'Direct access to specialist tax barristers for accountants and professional advisers under the Licensed Access Scheme—without unnecessary layers.',
+    "Direct access to specialist tax barristers for accountants and professional advisers under the Licensed Access Scheme—without unnecessary layers.",
 };
 
 const howIHelp = [
-  'Match you with the right barrister for your issue',
-  'Agree scope of work so you stay in control of cost',
-  'Provide clear fee estimates upfront',
-  'Coordinate timelines and deliverables',
-  'Step in quickly for urgent matters',
+  "Match you with the right barrister for your issue",
+  "Agree scope of work so you stay in control of cost",
+  "Provide clear fee estimates upfront",
+  "Coordinate timelines and deliverables",
+  "Step in quickly for urgent matters",
 ];
 
 export default function LicensedAccessPage() {
@@ -32,25 +32,29 @@ export default function LicensedAccessPage() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
               <div className="lg:col-span-3 space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  If you are an accountant or professional adviser, you can instruct counsel
-                  directly under the Licensed Access Scheme. This saves time and can reduce cost.
+                  If you are an accountant or professional adviser, you can
+                  instruct counsel directly under the Licensed Access Scheme.
+                  This saves time and can reduce cost.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  I will guide you through the process and ensure you get the right level of
-                  support.
+                  I will guide you through the process and ensure you get the
+                  right level of support.
                 </p>
 
-                <h2 className="font-heading text-2xl font-semibold text-gray-900">How I Help</h2>
+                <h2 className="font-heading text-2xl font-semibold text-gray-900">
+                  How I Help
+                </h2>
                 <CheckList items={howIHelp} />
 
                 <p className="text-gray-700 leading-relaxed">
-                  If a solicitor is needed at any stage, I can recommend one suited to your
-                  client and the issue.
+                  If a solicitor is needed at any stage, I can recommend one
+                  suited to your client and the issue.
                 </p>
 
-                <div className="rounded-xl bg-cream border border-accent/20 p-6">
-                  <p className="text-sm text-gray-700 mb-3">
-                    Please see the Bar Council information about Licensed Access here:
+                <div className="rounded-xl bg-cream border border-accent/20 p-6 space-y-3">
+                  <p className="text-sm text-gray-700">
+                    Please see the Bar Council information about Licensed Access
+                    here:
                   </p>
                   <a
                     href="https://www.barstandardsboard.org.uk/for-barristers/bsb-handbook-and-code-guidance/the-bsb-handbook/the-bsb-handbook-part-vb-responsibilities-of-bsb-regulated-persons-who-are-not-barristers/guidance-on-the-licensed-access-recognition-regulations.html"
@@ -61,10 +65,30 @@ export default function LicensedAccessPage() {
                     <span>Licensed Access Recognition Regulations</span>
                     <ExternalLink className="h-4 w-4" />
                   </a>
+                  <div className="pt-2 border-t border-gray-200 space-y-2">
+                    <p className="text-sm text-gray-700 mb-2">
+                      Download documents:
+                    </p>
+                    <a
+                      href="/Licensed-access-terms-of-work.pdf"
+                      download
+                      className="flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
+                    >
+                      <span>License Access Terms of Work (PDF)</span>
+                    </a>
+                    <a
+                      href="/Licensed-Access-Guidance.pdf"
+                      download
+                      className="flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"
+                    >
+                      <span>Licensed Access Guidance (PDF)</span>
+                    </a>
+                  </div>
                 </div>
 
                 <p className="text-gray-700 leading-relaxed font-medium">
-                  Speak to me to explore whether Licensed Access is right for your matter.
+                  Speak to me to explore whether Licensed Access is right for
+                  your matter.
                 </p>
 
                 <div className="pt-2">
