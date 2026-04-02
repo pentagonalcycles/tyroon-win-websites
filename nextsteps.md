@@ -2,28 +2,26 @@
 
 ## Current Status (April 2, 2026)
 
-### Changes Applied — Client Feedback (Mr Ty)
+### Changes Applied — Client Feedback (Mr Ty) — barristersclerk.co.uk only
 
-- **Page headings**: All inner-page hero headings (`PageHero` component) changed to dark green (`text-green-900`) on existing burgundy background
-- **TopBar navigation**: "Practice Managers" link renamed to "Clerks & Practice Managers"; visible "Menu" label added above hamburger icon
-- **Footer (both sites)**: Added disclaimer text above copyright bar on every page: _"Barrister's Clerk" provides administrative, marketing, and clerical support services…_; added links for Cookie Policy, Fees, Collaborate with us; "Contact us" text added bottom-right
-- **Public Access pages (both sites)**: Added download link for `Public-Access-Guidance-for-Lay-Clients.pdf` — drop the real PDF into `apps/barristersclerk/public/` and `apps/taxclerk/public/`
-- **Licensed Access pages (both sites)**: Added download links for `Licensed-access-terms-of-work.pdf` and `Licensed-Access-Guidance.pdf` — drop real PDFs into both `public/` directories
-- **Lawyers pages (both sites)**: Added "Standard Documents" section with download links for `Standard-Contractual-Terms-2020.pdf` and `Contractual-Terms-Explanation.pdf` — drop real PDFs into both `public/` directories
+- **Page headings**: All inner-page hero headings (`PageHero` component with `darkHeading` prop) changed to dark green (`text-green-900`) on existing burgundy background
+- **TopBar navigation**: "Practice Managers" link renamed to "Clerks & Practice Managers"; visible "Menu" label added above hamburger icon; "Home" link added
+- **Footer (barristersclerk only)**: Added disclaimer text above copyright bar: _"Barrister's Clerk" provides administrative, marketing, and clerical support services…_; added links for Privacy Policy, Cookie Policy, Fees; "Contact us" text added bottom-right; "Collaborate with us" removed
+- **Public Access page (barristersclerk)**: Added download link for `Public-Access-Guidance-for-Lay-Clients.pdf`
+- **Licensed Access page (barristersclerk)**: Added download links for `Licensed-access-terms-of-work.pdf` and `Licensed-Access-Guidance.pdf`
+- **Lawyers page (barristersclerk)**: Added "Standard Documents" section with download links for `Standard-Contractual-Terms-2020.pdf` and `Contractual-Terms-Explanation.pdf`
 
-### PDFs — Action Required
+### PDFs — Deployed
 
-Placeholder (empty) PDF files have been committed. Replace them with the real files using these exact filenames:
+All 5 PDF files are deployed and live in `apps/barristersclerk/public/`:
 
-| File                                         | Pages           |
-| -------------------------------------------- | --------------- |
-| `Public-Access-Guidance-for-Lay-Clients.pdf` | Public Access   |
-| `Licensed-access-terms-of-work.pdf`          | Licensed Access |
-| `Licensed-Access-Guidance.pdf`               | Licensed Access |
-| `Standard-Contractual-Terms-2020.pdf`        | Lawyers         |
-| `Contractual-Terms-Explanation.pdf`          | Lawyers         |
-
-Place each file in **both** `apps/barristersclerk/public/` and `apps/taxclerk/public/`.
+| File                                         | Size  |
+| -------------------------------------------- | ----- |
+| `Public-Access-Guidance-for-Lay-Clients.pdf` | 169KB |
+| `Licensed-access-terms-of-work.pdf`          | 330KB |
+| `Licensed-Access-Guidance.pdf`               | 250KB |
+| `Standard-Contractual-Terms-2020.pdf`        | 260KB |
+| `Contractual-Terms-Explanation.pdf`          | 661KB |
 
 ---
 
