@@ -17,6 +17,10 @@ interface MegaMenuProps {
 
 const menuData: MenuItem[] = [
   {
+    label: "Home",
+    href: "/",
+  },
+  {
     label: "Barristers",
     href: "/barristers",
   },
