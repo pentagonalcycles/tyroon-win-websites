@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import { PageHero, Section, Container } from "@tyroon/shared";
 
@@ -62,11 +63,13 @@ export default function BarristersPage() {
                     </p>
                   </div>
                   <div className="shrink-0 ml-4">
-                    <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary/40">
-                        SJ
-                      </span>
-                    </div>
+                    <Image
+                      src="/SimonJelf.jpg"
+                      alt="Simon Jelf"
+                      width={80}
+                      height={80}
+                      className="w-20 h-20 rounded-full object-cover"
+                    />
                   </div>
                 </div>
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -135,11 +138,13 @@ export default function BarristersPage() {
                     </p>
                   </div>
                   <div className="shrink-0 ml-4">
-                    <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary/40">
-                        SM
-                      </span>
-                    </div>
+                    <Image
+                      src="/StefanoMariani.png"
+                      alt="Stefano Mariani"
+                      width={80}
+                      height={80}
+                      className="w-20 h-20 rounded-full object-cover"
+                    />
                   </div>
                 </div>
                 <p className="text-gray-700 leading-relaxed mb-4">
