@@ -128,7 +128,7 @@ const practiceAreas: PracticeArea[] = [
     icon: <ScaleIcon className="w-12 h-12 md:w-16 md:h-16" />,
   },
   {
-    title: "Tax Appeals",
+    title: "Tax",
     href: "/tax",
     icon: <CalculatorIcon className="w-12 h-12 md:w-16 md:h-16" />,
   },

@@ -1,24 +1,42 @@
 # Next Steps
 
-## Current Status (April 2, 2026)
+## Current Status (April 4, 2026)
+
+All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
+
+### Client Feedback Fixes (April 4, 2026)
+
+- **TopBar background**: Added `.dc-topbar` CSS with dark green (`#1b4d3e`) background and gold border. Previously the class had no background defined, making white text invisible against the page.
+- **Page banner titles**: Fixed `PageHero` component — all `<h1>` titles on the green banner are now always white. Previously `darkHeading` prop caused them to render as `text-green-900` (invisible on green).
+- **LinkedIn link**: Updated footer LinkedIn URL to correct personal profile: `https://www.linkedin.com/in/tyroon-win-b4216819/`
+- **Privacy policy**: Changed minimum age from 13 to 18 in Section 8 (Children's Data).
+- **Icon grid label**: Changed "Tax Appeals" to "Tax" on the homepage practice area icon.
+- **Licensed Access link**: Fixed broken BSB link to: `https://www.barstandardsboard.org.uk/for-barristers/public-and-licensed-access/licensed-access-recognition-regulations.html`
+- **Individual barrister pages**: Created `/barristers/simon-jelf` and `/barristers/stefano-mariani` as dedicated profile pages. The `/barristers` overview page now shows cards linking to each individual page. MegaMenu updated with a dropdown under "Barristers" showing: All Barristers, Simon Jelf, Stefano Mariani.
+
+---
+
+## Previous Status (April 2, 2026)
 
 All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
 
 ### Navigation & Layout
 
 - **TopBar**: "Practice Managers" renamed to "Clerks & Practice Managers"; "Home" link added; visible "Menu" label added above hamburger icon
-- **Page headings**: All inner-page `PageHero` headings use `darkHeading` prop — dark green (`text-green-900`) on burgundy background (barristersclerk only; taxclerk keeps white headings)
+- **Page headings**: All inner-page `PageHero` headings use `darkHeading` prop — now ignored; titles are always white (fixed April 4)
 - **Footer**: Disclaimer text added above copyright bar; Cookie Policy, Fees links added; "Contact us" text at bottom-right; "Collaborate with us" removed; Legal section in footer columns now includes Cookie Policy, Terms & Conditions, Complaints Information
 
 ### Pages Updated
 
-- **`/barristers`**: Full bios for Simon Jelf (Partnership & LLP) and Stefano Mariani (Tax), with real photos (`SimonJelf.jpg`, `StefanoMariani.png`)
+- **`/barristers`**: Now an overview page with cards linking to individual barrister profiles
+- **`/barristers/simon-jelf`**: Full profile page for Simon Jelf (Partnership & LLP)
+- **`/barristers/stefano-mariani`**: Full profile page for Stefano Mariani (Tax)
 - **`/tax`**: Expanded with full Tax Specialist Areas (6 categories) and Hong Kong Tax & Trusts section
 - **`/partnership`**: Already had full content from earlier session
 - **`/work-with-us`**: Expanded with collaboration model for freelance clerks and barristers/sole practitioners
-- **`/privacy`**: Updated to new privacy notice content from client document
+- **`/privacy`**: Updated to new privacy notice content; minimum age set to 18
 - **`/public-access`**: Download link for `Public-Access-Guidance-for-Lay-Clients.pdf`
-- **`/licensed-access`**: Download links for `Licensed-access-terms-of-work.pdf` and `Licensed-Access-Guidance.pdf`
+- **`/licensed-access`**: Download links for `Licensed-access-terms-of-work.pdf` and `Licensed-Access-Guidance.pdf`; BSB link corrected
 - **`/lawyers`**: Standard Documents section with download links for `Standard-Contractual-Terms-2020.pdf` and `Contractual-Terms-Explanation.pdf`
 
 ### New Pages Created

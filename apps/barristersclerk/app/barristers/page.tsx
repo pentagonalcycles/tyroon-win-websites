@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { PageHero, Section, Container } from "@tyroon/shared";
 
 export const metadata: Metadata = {
@@ -10,29 +10,29 @@ export const metadata: Metadata = {
     "Experienced barristers in partnership, LLP, and tax law. Simon Jelf and Stefano Mariani offer specialist expertise for your matter.",
 };
 
-const simonAreas = [
-  "Drafting, reviewing, and interpreting bespoke partnership and LLP agreements",
-  "Partner exits, expulsions, and retirements",
-  "Restrictive covenants and post-termination arrangements",
-  "Governance, decision-making, and internal processes",
-  "Unfair prejudice and breach of good-faith claims",
-  "NHS medical partnership governance and disputes",
-];
-
-const stefanoAreas = [
-  "Cross-border tax planning and international structuring",
-  "Tax disputes and litigation, including tribunal advocacy",
-  "Judicial review in tax matters and challenges to revenue decisions",
-  "Tax investigations, audits, and negotiated settlements",
-  "Stamp duties, VAT, and corporate tax issues",
-  "Trusts, estate planning, and related disputes",
+const barristers = [
+  {
+    name: "Simon Jelf",
+    role: "Partnership & LLP Barrister",
+    href: "/barristers/simon-jelf",
+    image: "/SimonJelf.jpg",
+    summary:
+      "Leading barrister specialising in partnership and LLP law. Trusted by professional firms, high-value partnerships, and individual partners for complex, high-stakes matters including NHS medical partnerships.",
+  },
+  {
+    name: "Stefano Mariani",
+    role: "Tax Barrister",
+    href: "/barristers/stefano-mariani",
+    image: "/StefanoMariani.png",
+    summary:
+      "Barrister qualified in England and Wales, also practising as a solicitor-advocate in Hong Kong. Combines advocacy experience, international insight, and technical depth in contentious tax cases.",
+  },
 ];
 
 export default function BarristersPage() {
   return (
     <>
       <PageHero
-        darkHeading
         title="Our Barristers"
         subtitle="Specialist Counsel"
         description="A select group of experienced barristers in partnership, LLP, and tax matters."
@@ -50,154 +50,41 @@ export default function BarristersPage() {
               </p>
             </div>
 
-            <div className="space-y-12 mb-16">
-              {/* Simon Jelf */}
-              <div className="bg-cream rounded-2xl p-8 border border-accent/20">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h2 className="font-heading text-2xl font-bold text-primary mb-1">
-                      Simon Jelf
-                    </h2>
-                    <p className="text-sm font-medium text-gray-600">
-                      Partnership &amp; LLP Barrister
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {barristers.map((barrister) => (
+                <Link
+                  key={barrister.href}
+                  href={barrister.href}
+                  className="group bg-cream rounded-2xl p-8 border border-accent/20 hover:border-accent/50 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h2 className="font-heading text-2xl font-bold text-primary mb-1 group-hover:text-primary-dark transition-colors">
+                        {barrister.name}
+                      </h2>
+                      <p className="text-sm font-medium text-gray-600">
+                        {barrister.role}
+                      </p>
+                    </div>
+                    <div className="shrink-0 ml-4">
+                      <Image
+                        src={barrister.image}
+                        alt={barrister.name}
+                        width={80}
+                        height={80}
+                        className="w-20 h-20 rounded-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <div className="shrink-0 ml-4">
-                    <Image
-                      src="/SimonJelf.jpg"
-                      alt="Simon Jelf"
-                      width={80}
-                      height={80}
-                      className="w-20 h-20 rounded-full object-cover"
-                    />
-                  </div>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Simon Jelf is a leading barrister specialising in partnership
-                  and LLP law, trusted by professional firms, high-value
-                  partnerships, and individual partners for complex, high-stakes
-                  matters. He advises a broad spectrum of clients, including
-                  solicitors, accountants, medical professionals, and other
-                  businesses operating through partnerships or LLPs. He is
-                  particularly renowned for his work with NHS medical
-                  partnerships, where governance, financial arrangements, and
-                  partner relationships require specialist insight.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Called to the Bar in 1996, Simon spent two years at the Law
-                  Commission reviewing partnership law, giving him an
-                  exceptional technical foundation. He joined a leading
-                  specialist chambers in 1999 and has devoted his career to
-                  partnership law, combining deep expertise with strategic
-                  insight. He is a member of the Association of Partnership
-                  Practitioners.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  His practice combines advisory and contentious work. He
-                  focuses on resolving matters efficiently through negotiation
-                  or mediation wherever possible. When litigation is
-                  unavoidable, he provides robust, clear, and strategic
-                  representation. Clients value his ability to quickly identify
-                  key issues and provide practical, outcome-driven advice.
-                </p>
-                <h3 className="font-semibold text-gray-900 mb-3">
-                  Areas of expertise include:
-                </h3>
-                <ul className="space-y-2">
-                  {simonAreas.map((area, i) => (
-                    <li key={i} className="flex items-start space-x-3">
-                      <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700">{area}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 pt-4 border-t border-gray-200">
-                  <p className="text-xs text-gray-500">
-                    Regulated by the Bar Standards Board.{" "}
-                    <a
-                      href="https://www.barstandardsboard.org.uk/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline"
-                    >
-                      Verify on the Barristers&apos; Register
-                    </a>
+                  <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                    {barrister.summary}
                   </p>
-                </div>
-              </div>
-
-              {/* Stefano Mariani */}
-              <div className="bg-cream rounded-2xl p-8 border border-accent/20">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h2 className="font-heading text-2xl font-bold text-primary mb-1">
-                      Stefano Mariani
-                    </h2>
-                    <p className="text-sm font-medium text-gray-600">
-                      Tax Barrister
-                    </p>
-                  </div>
-                  <div className="shrink-0 ml-4">
-                    <Image
-                      src="/StefanoMariani.png"
-                      alt="Stefano Mariani"
-                      width={80}
-                      height={80}
-                      className="w-20 h-20 rounded-full object-cover"
-                    />
-                  </div>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Stefano Mariani brings a combination of advocacy experience,
-                  international insight, and technical depth that is
-                  particularly valuable in contentious tax cases. He is
-                  qualified as a barrister in England and Wales and also
-                  practises as a solicitor-advocate in Hong Kong, giving him a
-                  strong understanding of both UK and international tax
-                  frameworks. He divides his practice between the UK and Asia,
-                  advising clients on matters that often span multiple
-                  jurisdictions.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  His practice covers both advisory and contentious work. He is
-                  regularly instructed on corporate and personal tax planning,
-                  group restructurings, and international tax issues, as well as
-                  disputes with revenue authorities. He has acted for clients at
-                  all stages of tax litigation, including tribunal proceedings
-                  and appeals before higher courts.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Alongside his practice, Stefano has a strong academic profile,
-                  holding teaching positions in revenue law and contributing to
-                  leading publications on tax and trusts. From a client
-                  perspective, he is known for providing clear, decisive advice
-                  and practical solutions.
-                </p>
-                <h3 className="font-semibold text-gray-900 mb-3">
-                  Areas of expertise include:
-                </h3>
-                <ul className="space-y-2">
-                  {stefanoAreas.map((area, i) => (
-                    <li key={i} className="flex items-start space-x-3">
-                      <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700">{area}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 pt-4 border-t border-gray-200">
-                  <p className="text-xs text-gray-500">
-                    Regulated by the Bar Standards Board.{" "}
-                    <a
-                      href="https://www.barstandardsboard.org.uk/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline"
-                    >
-                      Verify on the Barristers&apos; Register
-                    </a>
-                  </p>
-                </div>
-              </div>
+                  <span className="inline-flex items-center space-x-1 text-primary font-medium text-sm group-hover:text-accent transition-colors">
+                    <span>View Profile</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              ))}
             </div>
 
             {/* CTA */}

@@ -190,7 +190,7 @@ export default function PrivacyPage() {
               </h2>
               <p className="text-gray-700 leading-relaxed">
                 Our services are not directed at children. We do not knowingly
-                collect data from individuals under 13.
+                collect data from individuals under 18.
               </p>
             </div>
 

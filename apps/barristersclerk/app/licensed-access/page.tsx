@@ -58,7 +58,7 @@ export default function LicensedAccessPage() {
                     here:
                   </p>
                   <a
-                    href="https://www.barstandardsboard.org.uk/for-barristers/bsb-handbook-and-code-guidance/the-bsb-handbook/the-bsb-handbook-part-vb-responsibilities-of-bsb-regulated-persons-who-are-not-barristers/guidance-on-the-licensed-access-recognition-regulations.html"
+                    href="https://www.barstandardsboard.org.uk/for-barristers/public-and-licensed-access/licensed-access-recognition-regulations.html"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 text-primary font-medium text-sm hover:text-primary-dark transition-colors"

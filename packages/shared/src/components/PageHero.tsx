@@ -8,12 +8,7 @@ interface PageHeroProps {
   darkHeading?: boolean;
 }
 
-export function PageHero({
-  title,
-  subtitle,
-  description,
-  darkHeading = false,
-}: PageHeroProps) {
+export function PageHero({ title, subtitle, description }: PageHeroProps) {
   return (
     <section className="bg-gradient-to-br from-primary to-primary-dark text-white pt-28 pb-16 md:pt-32 md:pb-20">
       <Container>
@@ -23,11 +18,7 @@ export function PageHero({
               {subtitle}
             </p>
           )}
-          <h1
-            className={`font-heading text-4xl md:text-5xl font-bold mb-4 leading-tight ${
-              darkHeading ? "text-green-900" : "text-white"
-            }`}
-          >
+          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 leading-tight text-white">
             {title}
           </h1>
           {description && (

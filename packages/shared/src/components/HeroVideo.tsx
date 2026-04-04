@@ -15,6 +15,12 @@ const searchIndex = [
   { title: "Partnership & LLP", href: "/partnership", type: "practice" },
   { title: "Tax Appeals", href: "/tax", type: "practice" },
   { title: "Barristers", href: "/barristers", type: "page" },
+  { title: "Simon Jelf", href: "/barristers/simon-jelf", type: "barrister" },
+  {
+    title: "Stefano Mariani",
+    href: "/barristers/stefano-mariani",
+    type: "barrister",
+  },
   { title: "Tyroon Win", href: "/about", type: "page" },
   { title: "Fees", href: "/fees", type: "page" },
   { title: "Contact", href: "/contact", type: "page" },
@@ -169,7 +175,9 @@ export function HeroVideo({
                       <span className="ml-2 text-sm text-gray-500 capitalize">
                         {result.type === "practice"
                           ? "Practice Area"
-                          : result.type}
+                          : result.type === "barrister"
+                            ? "Barrister"
+                            : result.type}
                       </span>
                     </Link>
                   ))}

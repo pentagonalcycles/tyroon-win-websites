@@ -88,7 +88,7 @@ export function Footer({ site }: FooterProps) {
             {site === "barristersclerk" && (
               <div className="flex items-center space-x-3">
                 <a
-                  href="https://www.linkedin.com/company/tyroon-win"
+                  href="https://www.linkedin.com/in/tyroon-win-b4216819/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/60 hover:text-accent transition-colors"

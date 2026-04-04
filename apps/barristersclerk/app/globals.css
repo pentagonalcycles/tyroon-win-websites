@@ -25,6 +25,16 @@
   }
 }
 
+.dc-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #1b4d3e;
+  z-index: 30;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
 .dc-overlay {
   position: fixed;
   inset: 0;

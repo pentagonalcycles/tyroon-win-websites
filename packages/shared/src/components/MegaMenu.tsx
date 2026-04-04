@@ -22,7 +22,11 @@ const menuData: MenuItem[] = [
   },
   {
     label: "Barristers",
-    href: "/barristers",
+    children: [
+      { label: "All Barristers", href: "/barristers" },
+      { label: "Simon Jelf", href: "/barristers/simon-jelf" },
+      { label: "Stefano Mariani", href: "/barristers/stefano-mariani" },
+    ],
   },
   {
     label: "Practice Areas",
