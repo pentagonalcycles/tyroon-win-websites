@@ -13,6 +13,7 @@ All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has no
 - **Icon grid label**: Changed "Tax Appeals" to "Tax" on the homepage practice area icon.
 - **Licensed Access link**: Fixed broken BSB link to: `https://www.barstandardsboard.org.uk/for-barristers/public-and-licensed-access/licensed-access-recognition-regulations.html`
 - **Individual barrister pages**: Created `/barristers/simon-jelf` and `/barristers/stefano-mariani` as dedicated profile pages. The `/barristers` overview page now shows cards linking to each individual page. MegaMenu updated with a dropdown under "Barristers" showing: All Barristers, Simon Jelf, Stefano Mariani.
+- **TopBar Barristers dropdown**: Added a hover dropdown directly on the "Barristers" link in the top navigation bar (desktop). Hovering reveals All Barristers, Simon Jelf, and Stefano Mariani — each linking to the respective page. Previously the dropdown was only accessible via the full MegaMenu overlay.
 
 ---
 
