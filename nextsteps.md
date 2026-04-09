@@ -4,6 +4,13 @@
 
 All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
 
+### Navigation — Tax link added (April 9, 2026)
+
+- **TopBar**: Added "Tax" as a direct link (`/tax`) in the desktop nav bar, between "Home" and the "Barristers" dropdown.
+- **MegaMenu**: Added "Tax" as a direct top-level link (`/tax`) between "Practice Areas" and "Who I Help", so it is immediately visible when the overlay menu is opened.
+- **MegaMenu**: "Who I Help" changed from an expanding submenu to a direct anchor link (`/#who-i-help`), scrolling to the three-card section on the homepage.
+- **Homepage**: Added `id="who-i-help"` to the Who I Help section to support the anchor link.
+
 ### Client Feedback Fixes (April 9, 2026)
 
 #### Barrister Profiles — Directory Quotes

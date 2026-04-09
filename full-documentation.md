@@ -233,7 +233,7 @@ export function TopBar(): JSX.Element;
 // Features:
 // - Dark burgundy bar (dc-topbar CSS class)
 // - Logo "The Barrister's Clerk" in white, links to /
-// - Desktop (lg+): phone number, nav links (Home, Barristers dropdown, Clerks & Practice Managers dropdown), mail icon
+// - Desktop (lg+): phone number, nav links (Home, Tax, Barristers dropdown, Clerks & Practice Managers dropdown), mail icon
 // - Desktop (lg+): animated "Menu" button that opens MegaMenu
 // - Mobile (<lg): hamburger/X icon button that opens MegaMenu
 // - Body scroll lock applied when menu is open
@@ -244,6 +244,7 @@ Desktop top-bar links:
 
 ```
 Home                         → /
+Tax                          → /tax
 Barristers (hover dropdown)
   ├─ All Barristers           → /barristers
   ├─ Simon Jelf               → /barristers/simon-jelf
@@ -290,10 +291,8 @@ Practice Areas (expands submenu — 3 sub-categories)
        ├─ HMRC Disputes          → /tax
        ├─ Tribunal Representation→ /tax
        └─ Tax Investigations     → /tax
-Who I Help (expands submenu)
-  ├─ Lawyers & Law Firms    → /lawyers
-  ├─ Licensed Access        → /licensed-access
-  └─ Members of the Public  → /public-access
+Tax                         → /tax
+Who I Help                  → /#who-i-help  (scrolls to homepage section)
 About (expands submenu)
   ├─ About Tyroon Win       → /about
   ├─ How to Instruct        → /contact
@@ -937,6 +936,6 @@ Vercel automatically provisions SSL certificates. No manual configuration needed
 
 ---
 
-_Documentation Version: 3.0_
+_Documentation Version: 3.1_
 _Last Updated: 9 April 2026_
 _Project: Tyroon Win Barrister Clerk Websites_
