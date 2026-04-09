@@ -54,6 +54,10 @@ const menuData: MenuItem[] = [
     ],
   },
   {
+    label: "Tax",
+    href: "/tax",
+  },
+  {
     label: "Who I Help",
     href: "/#who-i-help",
   },

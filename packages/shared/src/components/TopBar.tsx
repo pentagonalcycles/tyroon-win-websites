@@ -59,6 +59,12 @@ export function TopBar() {
               >
                 Home
               </Link>
+              <Link
+                href="/tax"
+                className="text-sm text-white hover:text-accent transition-colors"
+              >
+                Tax
+              </Link>
               {/* Barristers dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-sm text-white hover:text-accent transition-colors">
