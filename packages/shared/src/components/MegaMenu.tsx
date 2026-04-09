@@ -55,11 +55,7 @@ const menuData: MenuItem[] = [
   },
   {
     label: "Who I Help",
-    children: [
-      { label: "Lawyers & Law Firms", href: "/lawyers" },
-      { label: "Licensed Access", href: "/licensed-access" },
-      { label: "Members of the Public", href: "/public-access" },
-    ],
+    href: "/#who-i-help",
   },
   {
     label: "About",

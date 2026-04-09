@@ -22,7 +22,7 @@ export default function HomePage() {
 
       <IconGrid />
 
-      <section className="py-16 md:py-20 lg:py-24 bg-white">
+      <section id="who-i-help" className="py-16 md:py-20 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
