@@ -205,7 +205,7 @@ xl: 1280px  /* Large desktops */
 **barristersclerk.co.uk** (TopBar — white on dark):
 
 ```
-Tyroon Win       ← bold, Playfair Display, white
+The Barrister's Clerk   ← bold, Playfair Display, white
 ```
 
 **taxclerk.co.uk** (Navbar — coloured on white):
@@ -232,8 +232,8 @@ export function TopBar(): JSX.Element;
 
 // Features:
 // - Dark burgundy bar (dc-topbar CSS class)
-// - Logo "Tyroon Win" in white, links to /
-// - Desktop (lg+): phone number, nav links (Home, Barristers, Clerks & Practice Managers), mail icon
+// - Logo "The Barrister's Clerk" in white, links to /
+// - Desktop (lg+): phone number, nav links (Home, Barristers dropdown, Clerks & Practice Managers dropdown), mail icon
 // - Desktop (lg+): animated "Menu" button that opens MegaMenu
 // - Mobile (<lg): hamburger/X icon button that opens MegaMenu
 // - Body scroll lock applied when menu is open
@@ -243,9 +243,14 @@ export function TopBar(): JSX.Element;
 Desktop top-bar links:
 
 ```
-Home                        → /
-Barristers                  → /barristers
-Clerks & Practice Managers  → /lawyers
+Home                         → /
+Barristers (hover dropdown)
+  ├─ All Barristers           → /barristers
+  ├─ Simon Jelf               → /barristers/simon-jelf
+  └─ Stefano Mariani          → /barristers/stefano-mariani
+Clerks & Practice Managers (hover dropdown)
+  ├─ All Clerks & Practice Managers → /lawyers
+  └─ Tyroon Win               → /about
 ```
 
 #### MegaMenu
@@ -270,31 +275,36 @@ Menu structure:
 
 ```
 Home                        → /
-Barristers                  → /barristers
-Practice Areas
+Barristers (expands submenu)
+  ├─ All Barristers          → /barristers
+  ├─ Simon Jelf              → /barristers/simon-jelf
+  └─ Stefano Mariani         → /barristers/stefano-mariani
+Practice Areas (expands submenu — 3 sub-categories)
   └─ Partnership & LLP
        ├─ Partnership Disputes   → /partnership
        ├─ LLP Agreements         → /partnership
        └─ Member Exits           → /partnership
+  └─ Dispute Resolution
+       └─ Mediation              → /mediation
   └─ Tax Appeals
        ├─ HMRC Disputes          → /tax
        ├─ Tribunal Representation→ /tax
        └─ Tax Investigations     → /tax
-Who I Help
+Who I Help (expands submenu)
   ├─ Lawyers & Law Firms    → /lawyers
   ├─ Licensed Access        → /licensed-access
   └─ Members of the Public  → /public-access
-About
+About (expands submenu)
   ├─ About Tyroon Win       → /about
   ├─ How to Instruct        → /contact
   ├─ Client Care            → /about#client-care
   └─ Fees                   → /fees
-News & Resources
+News & Resources (expands submenu)
   ├─ News                   → /news   ⚠ page not yet built
   └─ Articles               → /news?filter=articles   ⚠ page not yet built
 Work With Us                → /work-with-us
 Contact                     → /contact
-Legal
+Legal (expands submenu)
   ├─ Privacy Policy         → /privacy
   ├─ Cookie Policy          → /cookie-policy
   ├─ Terms & Conditions     → /terms
@@ -302,6 +312,8 @@ Legal
 ```
 
 > **Note:** The `/news` route does not yet exist in the barristersclerk app. The MegaMenu links to it but it will 404 until the page is built.
+
+> **Bug fix (April 2026):** `handleCategoryClick` previously short-circuited categories with flat children (no grandchildren) by calling `onClose()` immediately. This caused "Barristers", "Who I Help", and "Legal" to close the menu with no action. Fixed by removing the short-circuit — all categories now correctly expand their submenu.
 
 #### Navbar
 
@@ -353,6 +365,10 @@ interface FooterProps {
 // - 4 columns: Brand/About, Quick Links, Practice Areas + Legal, Contact
 // - Cookie Policy and Fees links only shown for barristersclerk
 // - Copyright with current year
+// - Brand column blurb (barristersclerk): "We provide access to Specialist barristers
+//   in Partnership and Tax. We work with solicitors, accountants, businesses and
+//   individuals. Our role is to connect you with the right barrister quickly and
+//   manage the process from start to finish."
 ```
 
 #### Container
@@ -436,7 +452,7 @@ interface PageHeroProps {
 
 #### IconGrid
 
-Two-column icon grid for practice areas. Hard-coded to Partnership & LLP and Tax Appeals. No props.
+Two-column icon grid for practice areas. Hard-coded to Partnership & LLP and Tax. No props.
 
 ```typescript
 export function IconGrid(): JSX.Element;
@@ -444,6 +460,7 @@ export function IconGrid(): JSX.Element;
 // Custom SVG icons (ScaleIcon, CalculatorIcon)
 // Hover: icon scales and changes to accent gold
 // Background: cream (bg-cream)
+// Labels: "Partnership & LLP" → /partnership, "Tax" → /tax
 ```
 
 #### Newsroom
@@ -547,24 +564,27 @@ Root layout sets `metadataBase` and a title template. Each app also has `sitemap
 
 ### URLs & Routes
 
-#### barristersclerk.co.uk — 14 routes
+#### barristersclerk.co.uk — 18 routes
 
 ```
-/                    Homepage
-/about               About Tyroon Win
-/lawyers             For Lawyers & Law Firms
-/licensed-access     For Licensed Access Clients
-/public-access       For Members of the Public
-/partnership         Partnership & LLP
-/tax                 Tax Appeals & Tribunal
-/barristers          Barrister Profiles
-/fees                Fee Information
-/contact             Contact Page
-/work-with-us        Work With Us
-/privacy             Privacy Policy
-/cookie-policy       Cookie Policy
-/terms               Terms & Conditions
-/complaints          Complaints Information
+/                          Homepage
+/about                     About Tyroon Win
+/lawyers                   For Lawyers & Law Firms
+/licensed-access           For Licensed Access Clients
+/public-access             For Members of the Public
+/partnership               Partnership & LLP
+/tax                       Tax
+/mediation                 Mediation (Dispute Resolution)
+/barristers                All Barrister Profiles
+/barristers/simon-jelf     Simon Jelf — Partnership & LLP Barrister
+/barristers/stefano-mariani Stefano Mariani — Tax Barrister
+/fees                      Fee Information
+/contact                   Contact Page
+/work-with-us              Work With Us
+/privacy                   Privacy Policy
+/cookie-policy             Cookie Policy
+/terms                     Terms & Conditions
+/complaints                Complaints Information
 ```
 
 Plus auto-generated: `/sitemap.xml`, `/robots.txt`, `/api/contact` (POST endpoint).
@@ -649,11 +669,23 @@ Key areas of expertise, dispute resolution, agreements, CTA.
 
 #### Tax (`/tax`)
 
-Content imported from `packages/shared/src/content/tax/tax-appeals.ts` (shared with taxclerk).
+Title: "Tax". Content partially imported from `packages/shared/src/content/tax/tax-appeals.ts` (shared with taxclerk). Page also includes inline Tax Specialist Areas grid (6 categories) and Hong Kong Tax & Trusts section.
 
 #### Barristers (`/barristers`)
 
-Placeholder grid (6 cards), CTA.
+Overview page with cards linking to individual barrister profiles.
+
+#### Simon Jelf (`/barristers/simon-jelf`)
+
+Full profile page: bio, areas of expertise checklist, "What the Directories Say" section (Chambers & Partners 2026, Legal 500 2026, Chambers & Partners 2023, Chambers & Partners earlier), CTA.
+
+#### Stefano Mariani (`/barristers/stefano-mariani`)
+
+Full profile page: bio, areas of expertise checklist, "What the Directories Say" section (Chambers Greater China Region 2022, Legal 500 Asia Pacific 2022 ×2), CTA.
+
+#### Mediation (`/mediation`)
+
+Dedicated Dispute Resolution / Mediation page for Simon Jelf as qualified mediator. Sections: intro, regularly instructed in, why instruct Simon (he will / his expertise), a better route than litigation (4-card advantages grid), approach, CTA.
 
 #### Fees (`/fees`)
 
@@ -793,13 +825,17 @@ Vercel automatically provisions SSL certificates. No manual configuration needed
 │   │   ├── app/
 │   │   │   ├── about/page.tsx
 │   │   │   ├── api/contact/route.ts
-│   │   │   ├── barristers/page.tsx
+│   │   │   ├── barristers/
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── simon-jelf/page.tsx
+│   │   │   │   └── stefano-mariani/page.tsx
 │   │   │   ├── complaints/page.tsx
 │   │   │   ├── contact/page.tsx
 │   │   │   ├── cookie-policy/page.tsx
 │   │   │   ├── fees/page.tsx
 │   │   │   ├── lawyers/page.tsx
 │   │   │   ├── licensed-access/page.tsx
+│   │   │   ├── mediation/page.tsx
 │   │   │   ├── partnership/page.tsx
 │   │   │   ├── privacy/page.tsx
 │   │   │   ├── public-access/page.tsx
@@ -888,16 +924,19 @@ Vercel automatically provisions SSL certificates. No manual configuration needed
 
 ## Known Gaps / Future Work
 
-| Item                 | Detail                                                                                                                |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `/news` page         | MegaMenu and Newsroom both link to `/news` and `/news?filter=articles`. Neither page exists yet. Links currently 404. |
-| Newsroom data        | `Newsroom.tsx` uses hard-coded placeholder articles. Needs a CMS or content layer when the news page is built.        |
-| taxclerk legal pages | `/cookie-policy`, `/terms`, and `/complaints` exist on barristersclerk but not taxclerk. Add if required.             |
-| Barrister profiles   | `/barristers` uses placeholder cards — no real profiles yet.                                                          |
-| Fees                 | `/fees` contains general guidance only — no specific fee ranges.                                                      |
+| Item                 | Detail                                                                                                                                                                 |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/news` page         | MegaMenu and Newsroom both link to `/news` and `/news?filter=articles`. Neither page exists yet. Links currently 404.                                                  |
+| Newsroom data        | `Newsroom.tsx` uses hard-coded placeholder articles. Needs a CMS or content layer when the news page is built.                                                         |
+| taxclerk legal pages | `/cookie-policy`, `/terms`, and `/complaints` exist on barristersclerk but not taxclerk. Add if required.                                                              |
+| Contact form email   | `/api/contact` endpoint exists but email delivery not wired up. Needs `RESEND_API_KEY` env var in Vercel.                                                              |
+| Fees                 | `/fees` contains general guidance only — no specific fee ranges yet.                                                                                                   |
+| Google Analytics     | Not yet added.                                                                                                                                                         |
+| Sitemap submission   | Not yet submitted to Google Search Console.                                                                                                                            |
+| Additional clerks    | The "Clerks & Practice Managers" TopBar dropdown is ready to extend — add new entries to `clerksDropdown` in `TopBar.tsx` pointing to `/lawyers/[name]` profile pages. |
 
 ---
 
-_Documentation Version: 2.0_
-_Last Updated: 2 April 2026_
+_Documentation Version: 3.0_
+_Last Updated: 9 April 2026_
 _Project: Tyroon Win Barrister Clerk Websites_
