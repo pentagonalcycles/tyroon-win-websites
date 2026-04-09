@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Menu, X, Mail, ChevronDown } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
 
-const barristersclerkLinks = [
-  { label: "Home", href: "/" },
-  { label: "Clerks & Practice Managers", href: "/lawyers" },
+const clerksDropdown = [
+  { label: "All Clerks & Practice Managers", href: "/lawyers" },
+  { label: "Tyroon Win", href: "/about" },
 ];
 
 const barristersDropdown = [
@@ -41,7 +41,7 @@ export function TopBar() {
             <div className="flex items-center">
               <Link href="/" className="flex items-center space-x-2 shrink-0">
                 <span className="font-heading font-bold text-xl text-white">
-                  Tyroon Win
+                  The Barrister&apos;s Clerk
                 </span>
               </Link>
             </div>
@@ -77,15 +77,24 @@ export function TopBar() {
                   ))}
                 </div>
               </div>
-              {barristersclerkLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-white hover:text-accent transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {/* Clerks & Practice Managers dropdown */}
+              <div className="relative group">
+                <button className="flex items-center space-x-1 text-sm text-white hover:text-accent transition-colors">
+                  <span>Clerks &amp; Practice Managers</span>
+                  <ChevronDown className="h-3.5 w-3.5 group-hover:rotate-180 transition-transform duration-200" />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-56 bg-primary-dark border border-primary-light/30 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  {clerksDropdown.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-sm text-white/80 hover:text-accent hover:bg-primary-light/20 first:rounded-t-lg last:rounded-b-lg transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               <a
                 href="mailto:tyroon.win@barristersclerk.co.uk"
                 className="text-white hover:text-accent transition-colors"

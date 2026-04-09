@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { CheckCircle, ArrowLeft } from "lucide-react";
+import { CheckCircle, ArrowLeft, Quote } from "lucide-react";
 import { PageHero, Section, Container } from "@tyroon/shared";
 
 export const metadata: Metadata = {
@@ -117,6 +117,86 @@ export default function SimonJelfPage() {
                     Verify on the Barristers&apos; Register
                   </a>
                 </p>
+              </div>
+            </div>
+
+            {/* What the Directories Say */}
+            <div className="space-y-6 mb-10">
+              <h2 className="font-heading text-2xl font-bold text-gray-900">
+                What the Directories Say
+              </h2>
+
+              {/* Chambers and Partners 2026 */}
+              <div className="bg-cream rounded-2xl p-6 border border-accent/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
+                  Chambers and Partners (2026)
+                </p>
+                <div className="space-y-3 text-gray-700 leading-relaxed">
+                  <p>
+                    Simon Jelf is creative, extremely hard-working and someone
+                    who knows the ins and outs of partnership law in a way few
+                    people do.
+                  </p>
+                  <p>
+                    Simon Jelf is an extremely pleasant man who can be tough
+                    when necessary. He lives and breathes partnership law, and
+                    is loved by clients as he can answer any partnership law
+                    question put to him.
+                  </p>
+                  <p>
+                    Simon Jelf is very responsive and simply top-drawer
+                    technically. He fully understands the commerciality of the
+                    dispute.
+                  </p>
+                </div>
+              </div>
+
+              {/* Legal 500 2026 */}
+              <div className="bg-cream rounded-2xl p-6 border border-accent/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
+                  Legal 500 (2026)
+                </p>
+                <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
+                  <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
+                  Simon is a genuine expert, well known and respected in this
+                  specialist area. He is elite.
+                </blockquote>
+              </div>
+
+              {/* Chambers and Partners 2023 */}
+              <div className="bg-cream rounded-2xl p-6 border border-accent/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
+                  Chambers and Partners (2023)
+                </p>
+                <div className="space-y-3">
+                  <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
+                    <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
+                    Simon is a client-friendly, calm and poised advocate, who
+                    always has an eye for the commercial and pragmatic solution.
+                    He is a genuine expert.
+                  </blockquote>
+                </div>
+              </div>
+
+              {/* Chambers & Partners (earlier) */}
+              <div className="bg-cream rounded-2xl p-6 border border-accent/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
+                  Chambers &amp; Partners
+                </p>
+                <div className="space-y-3">
+                  <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
+                    <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
+                    &hellip; brimming with common-sense advice.
+                  </blockquote>
+                  <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
+                    <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
+                    &hellip; warmly endorsed by clients for his clear advice.
+                  </blockquote>
+                  <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
+                    <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
+                    &hellip; very much on the rise.
+                  </blockquote>
+                </div>
               </div>
             </div>
 

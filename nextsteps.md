@@ -1,6 +1,50 @@
 # Next Steps
 
-## Current Status (April 4, 2026)
+## Current Status (April 9, 2026)
+
+All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
+
+### Client Feedback Fixes (April 9, 2026)
+
+#### Barrister Profiles — Directory Quotes
+
+- **`/barristers/simon-jelf`**: Added "What the Directories Say" section below the bio card with four attributed blocks:
+  - Chambers and Partners (2026) — three editorial quotes
+  - Legal 500 (2026) — pull quote
+  - Chambers and Partners (2023) — pull quote
+  - Chambers & Partners (earlier) — three short quotes
+- **`/barristers/stefano-mariani`**: Added "What the Directories Say" section with:
+  - Chambers Greater China Region (2022) — editorial quote
+  - Legal 500 Asia Pacific (2022) — two pull quotes
+
+#### New Page — `/mediation`
+
+- Created `apps/barristersclerk/app/mediation/page.tsx` as a dedicated Dispute Resolution / Mediation practice area page
+- Content covers: Simon Jelf's qualifications as mediator, types of disputes, why to instruct Simon, his expertise, advantages of mediation over litigation, approach, and CTA
+- Added "Dispute Resolution → Mediation" sub-category under Practice Areas in `MegaMenu.tsx`
+- Added a linked callout on the `/partnership` page pointing to `/mediation`
+
+#### Navigation — TopBar
+
+- **Duplicate "Home" link removed**: The `barristersclerkLinks` array previously included `{ label: "Home" }` which duplicated the hardcoded Home link. Array updated to only contain "Clerks & Practice Managers".
+- **"Clerks & Practice Managers" converted to dropdown**: Now matches the Barristers pattern — hover reveals "All Clerks & Practice Managers" (`/lawyers`) and "Tyroon Win" (`/about`). Easy to extend with new clerks later.
+- **Logo text updated**: "Tyroon Win" → "The Barrister's Clerk" in the top-left brand link.
+
+#### Navigation — MegaMenu Bug Fix
+
+- **`handleCategoryClick` logic fixed**: Previously, clicking any top-level item whose children had no grandchildren (e.g. "Barristers", "Who I Help", "Legal") would call `onClose()` immediately — closing the menu with no navigation and no submenu shown. The short-circuit was removed; all categories now correctly expand their submenu on click.
+
+#### Tax Page
+
+- **`/tax` page title**: Changed from "Tax Appeals & Tribunal" to "Tax" — updated in both `tax-appeals.ts` (shared content) and the page `metadata` title.
+
+#### Footer
+
+- **About blurb**: Updated footer brand-column description to: "We provide access to Specialist barristers in Partnership and Tax. We work with solicitors, accountants, businesses and individuals. Our role is to connect you with the right barrister quickly and manage the process from start to finish."
+
+---
+
+## Previous Status (April 4, 2026)
 
 All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
 

@@ -1,50 +1,51 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { PageHero, Section, Container, CheckList } from '@tyroon/shared';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { PageHero, Section, Container, CheckList } from "@tyroon/shared";
 
 export const metadata: Metadata = {
-  title: 'Partnership & LLP Expertise',
+  title: "Partnership & LLP Expertise",
   description:
-    'Expert barristers specialising in partnership and LLP law—disputes, agreements, governance, exits, and more. All access routes: solicitor, licensed access, and public access.',
+    "Expert barristers specialising in partnership and LLP law—disputes, agreements, governance, exits, and more. All access routes: solicitor, licensed access, and public access.",
 };
 
 const keyAreas = [
-  'Partner and member exits, including voluntary departures, forced removals, and compulsory retirements',
-  'Team moves, lateral hires, and the transfer of key individuals between firms',
-  'Valuation and distribution of partnership assets, including goodwill and property',
-  'Drafting, reviewing, and interpreting partnership and LLP agreements, focusing on governance, commercial terms, and operational clarity',
-  'Clarifying partner, member, or employee status where roles or rights are uncertain',
-  'Governance and internal decision-making, including duties, approvals, and operational processes',
-  'Claims of unfair prejudice or breaches of good-faith obligations',
-  'Restrictive covenants, non-compete clauses, and garden leave arrangements',
-  'Firm mergers, restructurings, and integration of partnerships',
-  'Dissolution, winding-up, and preparation of accounts',
-  'Insolvency matters affecting partnerships or LLPs',
-  'Discrimination claims involving partners or members',
-  'Regulatory compliance and representation, including SRA, Legal Ombudsman, and SDT matters',
+  "Partner and member exits, including voluntary departures, forced removals, and compulsory retirements",
+  "Team moves, lateral hires, and the transfer of key individuals between firms",
+  "Valuation and distribution of partnership assets, including goodwill and property",
+  "Drafting, reviewing, and interpreting partnership and LLP agreements, focusing on governance, commercial terms, and operational clarity",
+  "Clarifying partner, member, or employee status where roles or rights are uncertain",
+  "Governance and internal decision-making, including duties, approvals, and operational processes",
+  "Claims of unfair prejudice or breaches of good-faith obligations",
+  "Restrictive covenants, non-compete clauses, and garden leave arrangements",
+  "Firm mergers, restructurings, and integration of partnerships",
+  "Dissolution, winding-up, and preparation of accounts",
+  "Insolvency matters affecting partnerships or LLPs",
+  "Discrimination claims involving partners or members",
+  "Regulatory compliance and representation, including SRA, Legal Ombudsman, and SDT matters",
 ];
 
 const disputeAreas = [
-  'Good-faith obligations and fiduciary duties',
-  'Partner or member removals',
-  'Restrictions on withdrawals and profit sharing',
-  'Dissolution and winding-up matters',
-  'Garden leave and post-termination restrictions',
-  'Enforcement and defence of restrictive covenants',
+  "Good-faith obligations and fiduciary duties",
+  "Partner or member removals",
+  "Restrictions on withdrawals and profit sharing",
+  "Dissolution and winding-up matters",
+  "Garden leave and post-termination restrictions",
+  "Enforcement and defence of restrictive covenants",
 ];
 
 const agreementHelp = [
-  'Drafting new partnership agreements and retirement or exit agreements',
-  'Preparing dissolution agreements',
-  'Advising on salaried and fixed-share arrangements',
-  'Updating existing agreements to reflect changing operational or legal requirements',
+  "Drafting new partnership agreements and retirement or exit agreements",
+  "Preparing dissolution agreements",
+  "Advising on salaried and fixed-share arrangements",
+  "Updating existing agreements to reflect changing operational or legal requirements",
 ];
 
 const llpSupport = [
-  'Conversion from a traditional partnership to LLP status, including enabling provisions and members\' agreements',
-  'Dispute resolution and governance within LLPs',
-  'Profit extraction, restrictive covenants, and garden leave',
-  'Ongoing review and updating of LLP agreements to meet regulatory and business needs',
+  "Conversion from a traditional partnership to LLP status, including enabling provisions and members' agreements",
+  "Dispute resolution and governance within LLPs",
+  "Profit extraction, restrictive covenants, and garden leave",
+  "Ongoing review and updating of LLP agreements to meet regulatory and business needs",
 ];
 
 export default function PartnershipPage() {
@@ -63,15 +64,17 @@ export default function PartnershipPage() {
             {/* Intro */}
             <div>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Tyroon Win works with clients to connect them with barristers specialising in
-                partnership and LLP law. My barristers advise firms, partners, and members on
-                governance, structural matters, and disputes, providing clear, practical guidance
-                tailored to each client&apos;s needs.
+                Tyroon Win works with clients to connect them with barristers
+                specialising in partnership and LLP law. My barristers advise
+                firms, partners, and members on governance, structural matters,
+                and disputes, providing clear, practical guidance tailored to
+                each client&apos;s needs.
               </p>
               <p className="mt-4 text-gray-700 leading-relaxed">
-                Whether you are a solicitor, professional adviser, or member of the public using
-                Public Access or Licensed Access, I can help you find the right barrister for your
-                matter, explain their expertise, and guide you through the instruction process.
+                Whether you are a solicitor, professional adviser, or member of
+                the public using Public Access or Licensed Access, I can help
+                you find the right barrister for your matter, explain their
+                expertise, and guide you through the instruction process.
               </p>
             </div>
 
@@ -80,7 +83,9 @@ export default function PartnershipPage() {
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 Key Areas of Expertise
               </h2>
-              <p className="text-gray-600 mb-6">My barristers regularly advise on:</p>
+              <p className="text-gray-600 mb-6">
+                My barristers regularly advise on:
+              </p>
               <CheckList items={keyAreas} />
             </div>
 
@@ -90,18 +95,34 @@ export default function PartnershipPage() {
                 Dispute Resolution
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                My barristers aim to resolve disputes efficiently and constructively, helping
-                clients avoid unnecessary litigation. When formal proceedings are required, they
-                are experienced in court, arbitration, and mediation.
+                My barristers aim to resolve disputes efficiently and
+                constructively, helping clients avoid unnecessary litigation.
+                When formal proceedings are required, they are experienced in
+                court, arbitration, and mediation.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                They take a hands-on approach, working with clients to understand both the legal
-                and strategic issues behind a dispute. Acting for both firms and individual
-                partners, they provide advice designed to prevent escalation, protect business
+                They take a hands-on approach, working with clients to
+                understand both the legal and strategic issues behind a dispute.
+                Acting for both firms and individual partners, they provide
+                advice designed to prevent escalation, protect business
                 operations, and deliver practical outcomes.
               </p>
-              <h3 className="font-semibold text-gray-900 mb-4">Typical areas include:</h3>
+              <h3 className="font-semibold text-gray-900 mb-4">
+                Typical areas include:
+              </h3>
               <CheckList items={disputeAreas} />
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <Link
+                  href="/mediation"
+                  className="inline-flex items-center space-x-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
+                >
+                  <span>
+                    Simon Jelf — Qualified Mediator for Partnership &amp; LLP
+                    Disputes
+                  </span>
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
 
             {/* Partnership Agreements */}
@@ -110,9 +131,9 @@ export default function PartnershipPage() {
                 Partnership and LLP Agreements
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                My barristers draft, review, and update agreements to reflect both the commercial
-                realities of running a firm and the practical needs of partners and members.
-                They can assist with:
+                My barristers draft, review, and update agreements to reflect
+                both the commercial realities of running a firm and the
+                practical needs of partners and members. They can assist with:
               </p>
               <CheckList items={agreementHelp} className="mb-6" />
 
@@ -124,11 +145,14 @@ export default function PartnershipPage() {
 
             {/* How I Can Help */}
             <div className="bg-primary text-white rounded-2xl p-8">
-              <h2 className="font-heading text-2xl font-bold mb-4">How I Can Help You</h2>
+              <h2 className="font-heading text-2xl font-bold mb-4">
+                How I Can Help You
+              </h2>
               <p className="text-white/90 leading-relaxed mb-6">
-                I guide clients through every step of the process, whether instructing via Public
-                Access, Licensed Access, or through a solicitor. I ensure you are matched with the
-                right barrister for your matter, provide clarity on fees and timing, and make the
+                I guide clients through every step of the process, whether
+                instructing via Public Access, Licensed Access, or through a
+                solicitor. I ensure you are matched with the right barrister for
+                your matter, provide clarity on fees and timing, and make the
                 instruction process straightforward and efficient.
               </p>
               <Link

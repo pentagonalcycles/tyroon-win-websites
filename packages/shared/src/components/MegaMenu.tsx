@@ -40,6 +40,10 @@ const menuData: MenuItem[] = [
         ],
       },
       {
+        label: "Dispute Resolution",
+        children: [{ label: "Mediation", href: "/mediation" }],
+      },
+      {
         label: "Tax Appeals",
         children: [
           { label: "HMRC Disputes", href: "/tax" },
@@ -106,16 +110,8 @@ export function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
   }, [isOpen]);
 
   const handleCategoryClick = (label: string) => {
-    const category = menuData.find((item) => item.label === label);
-    if (
-      category?.children &&
-      !category.children.some((child) => child.children)
-    ) {
-      onClose();
-    } else {
-      setActiveCategory(activeCategory === label ? null : label);
-      setActiveSubcategory(null);
-    }
+    setActiveCategory(activeCategory === label ? null : label);
+    setActiveSubcategory(null);
   };
 
   const handleSubcategoryClick = (label: string) => {

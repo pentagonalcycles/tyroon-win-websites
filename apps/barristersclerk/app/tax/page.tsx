@@ -10,7 +10,7 @@ import {
 } from "@tyroon/shared";
 
 export const metadata: Metadata = {
-  title: "Tax Appeals & Tribunal",
+  title: "Tax",
   description:
     "Specialist tax barristers for UK and international tax matters — advisory, disputes, HMRC investigations, and tribunal advocacy.",
 };

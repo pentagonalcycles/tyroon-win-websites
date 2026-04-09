@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { CheckCircle, ArrowLeft } from "lucide-react";
+import { CheckCircle, ArrowLeft, Quote } from "lucide-react";
 import { PageHero, Section, Container } from "@tyroon/shared";
 
 export const metadata: Metadata = {
@@ -115,6 +115,45 @@ export default function StefanoMarianiPage() {
                     Verify on the Barristers&apos; Register
                   </a>
                 </p>
+              </div>
+            </div>
+
+            {/* What the Directories Say */}
+            <div className="space-y-6 mb-10">
+              <h2 className="font-heading text-2xl font-bold text-gray-900">
+                What the Directories Say
+              </h2>
+
+              {/* Chambers Greater China 2022 */}
+              <div className="bg-cream rounded-2xl p-6 border border-accent/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
+                  Chambers Greater China Region (2022)
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Stefano is able to provide advice about complex points of law.
+                  Stefano has both the academic knowledge and the ability to
+                  provide real life solutions to legal issues.
+                </p>
+              </div>
+
+              {/* Legal 500 Asia Pacific 2022 — HK IRD */}
+              <div className="bg-cream rounded-2xl p-6 border border-accent/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
+                  Legal 500 Asia Pacific (2022)
+                </p>
+                <div className="space-y-3">
+                  <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
+                    <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
+                    Stefano Mariani&apos;s grasp of Hong Kong Inland Revenue
+                    Department practice, attitudes and priorities is immensely
+                    helpful.
+                  </blockquote>
+                  <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
+                    <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
+                    Stefano Mariani is an excellent Tax lawyer: highly
+                    knowledgeable, confident, clear in his advice and decisive.
+                  </blockquote>
+                </div>
               </div>
             </div>
 

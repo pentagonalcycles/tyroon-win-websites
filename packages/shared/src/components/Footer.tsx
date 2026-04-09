@@ -82,8 +82,10 @@ export function Footer({ site }: FooterProps) {
               </span>
             </Link>
             <p className="text-sm text-white/70 leading-relaxed mb-4">
-              Over 20 years&apos; experience connecting clients with the right
-              specialist counsel—efficiently, clearly, and cost-effectively.
+              We provide access to Specialist barristers in Partnership and Tax.
+              We work with solicitors, accountants, businesses and individuals.
+              Our role is to connect you with the right barrister quickly and
+              manage the process from start to finish.
             </p>
             {site === "barristersclerk" && (
               <div className="flex items-center space-x-3">
