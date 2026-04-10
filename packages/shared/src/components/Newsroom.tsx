@@ -17,8 +17,8 @@ interface NewsArticle {
 const placeholderArticles: NewsArticle[] = [
   {
     id: "1",
-    title: "Chambers Recognised in Legal 500 Rankings",
-    category: "Chambers",
+    title: "Barristers Recognised in Legal 500 Rankings",
+    category: "Directories",
     date: "March 2026",
     image: "/images/news-1.jpg",
     excerpt:

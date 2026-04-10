@@ -77,7 +77,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
-              Barristers Recognised in Chambers &amp; Partners and Legal 500
+              What the Directories Say
             </h2>
             <p className="text-gray-600">
               Recognised by leading legal directories for responsiveness and

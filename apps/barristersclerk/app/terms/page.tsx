@@ -54,8 +54,11 @@ const sections = [
   {
     title: "6. Hearings",
     items: [
-      "You must provide the court with the correct contact details for your barrister.",
-      "You remain responsible for complying with court deadlines unless agreed otherwise.",
+      "Court Coordination: If you are a litigant in person, you must provide the court with your barrister's correct contact details.",
+      "Deadlines: Unless specifically agreed otherwise, you remain responsible for meeting all court-mandated deadlines and directions.",
+      "Fees & Preparation: Fees cover both initial preparation and the reservation of your hearing dates. As this time is set aside exclusively for your case, fees are non-refundable once instructions are confirmed. This includes instances where a hearing concludes early, is vacated, or is adjourned by the court.",
+      "Court Adjournments: Should the court vacate or adjourn a hearing at short notice, you may be entitled to pursue a complaint with HM Courts and Tribunals Service or consider a claim for wasted costs.",
+      "Scheduling Accuracy: Please ensure hearing dates are accurate and complete. Any additional days required beyond the original instruction will incur further fees.",
     ],
   },
   {
@@ -76,9 +79,10 @@ const sections = [
   {
     title: "9. Liability",
     items: [
-      "Professional indemnity insurance is maintained in line with regulatory requirements.",
-      "Liability is limited to the level of cover in place at the time of instruction.",
-      "No liability is accepted for indirect or consequential losses, including loss of profits or opportunity.",
+      "Professional indemnity insurance is maintained by the Barrister in line with regulatory requirements.",
+      "Liability is limited to the level of cover held by the Barrister at the time of instruction.",
+      "The Barrister accepts no liability for indirect or consequential losses, including loss of profits or opportunity.",
+      "The Clerk acts as an agent for the Barrister and accepts no personal or professional liability for the legal services provided.",
     ],
   },
   {
@@ -92,7 +96,7 @@ const sections = [
     title: "11. Data Protection",
     items: [
       "Personal data is handled in accordance with our Privacy Policy.",
-      "Data is used only to manage enquiries, provide legal services, and meet legal or regulatory obligations.",
+      "Data is used only to manage enquiries, provides coordination and practice management services, and meet legal or regulatory obligations.",
     ],
   },
   {

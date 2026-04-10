@@ -7,7 +7,7 @@ import { MegaMenu } from "./MegaMenu";
 
 const clerksDropdown = [
   { label: "All Clerks & Practice Managers", href: "/clerks" },
-  { label: "Tyroon Win", href: "/about" },
+  { label: "Tyroon Win", href: "/tyroon-win" },
 ];
 
 const barristersDropdown = [

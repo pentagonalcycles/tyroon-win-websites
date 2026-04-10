@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     "",
     "/about",
+    "/tyroon-win",
     "/how-to-instruct-us",
     "/clerks",
     "/lawyers",

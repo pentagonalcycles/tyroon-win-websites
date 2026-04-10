@@ -14,7 +14,7 @@ const clerks = [
   {
     name: "Tyroon Win",
     role: "Barrister's Clerk & Practice Manager",
-    href: "/about",
+    href: "/tyroon-win",
     image: "/images/tyroon-win.jpg",
     summary:
       "Over 20 years' experience connecting solicitors, accountants, businesses, and individuals with specialist barristers in partnership and tax matters.",

@@ -95,7 +95,8 @@ export default function PrivacyPage() {
                 assess website usage and advertising platforms to manage
                 campaigns. These providers act under their own privacy terms.
                 You should review their policies to understand how they handle
-                your data.
+                your data. If we do, they will be listed on our website under
+                Resources.
               </p>
             </div>
 

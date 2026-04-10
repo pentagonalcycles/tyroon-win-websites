@@ -4,6 +4,16 @@
 
 All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
 
+### Follow-up Revisions (April 10, 2026)
+
+- **Homepage directories heading reverted**: changed back to "What the Directories Say".
+- **Tyroon bio restored on dedicated page**: created `/tyroon-win` and linked Tyroon profile entries in TopBar Clerks dropdown and `/clerks` listing page to this route.
+- **MegaMenu About updated**: About submenu now lists "The Barrister's Clerk" (`/about`) and "Tyroon Win" (`/tyroon-win`), plus Fees.
+- **MegaMenu placement update**: "How to Instruct Us" moved out of About submenu and made a standalone top-level item directly below "Who I Help".
+- **Privacy Policy update**: Section 4 now adds: "If we do, they will be listed on our website under Resources."
+- **Terms update**: Section 6 (Hearings) and Section 9 (Liability) replaced with expanded client-approved wording.
+- **Footer copyright (barristersclerk)**: now displays "© [year] The Barrister's Clerk" instead of "Tyroon Win".
+
 ### Client Feedback Fixes (April 10, 2026)
 
 - **Global email update**: Replaced `tyroon.win@barristersclerk.co.uk` with `tyroon.win@thebarristersclerk.com` across barristersclerk pages/components and contact API comments.

@@ -59,10 +59,14 @@ const menuData: MenuItem[] = [
     href: "/#who-i-help",
   },
   {
+    label: "How to Instruct Us",
+    href: "/how-to-instruct-us",
+  },
+  {
     label: "About",
     children: [
-      { label: "About Tyroon Win", href: "/about" },
-      { label: "How to Instruct Us", href: "/how-to-instruct-us" },
+      { label: "The Barrister's Clerk", href: "/about" },
+      { label: "Tyroon Win", href: "/tyroon-win" },
       { label: "Fees", href: "/fees" },
     ],
   },

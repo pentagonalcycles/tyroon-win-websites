@@ -234,8 +234,11 @@ export function Footer({ site }: FooterProps) {
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-white/50">
               <p>
-                &copy; {new Date().getFullYear()} Tyroon Win. All rights
-                reserved.
+                &copy; {new Date().getFullYear()}{" "}
+                {site === "barristersclerk"
+                  ? "The Barrister's Clerk"
+                  : "Tyroon Win"}
+                . All rights reserved.
               </p>
               <span className="hidden sm:inline text-white/30">|</span>
               <Link

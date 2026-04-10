@@ -255,7 +255,7 @@ Barristers (hover dropdown)
   └─ Stefano Mariani          → /barristers/stefano-mariani
 Clerks & Practice Managers (hover dropdown)
   ├─ All Clerks & Practice Managers → /clerks
-  └─ Tyroon Win               → /about
+  └─ Tyroon Win               → /tyroon-win
 ```
 
 #### MegaMenu
@@ -292,9 +292,10 @@ Practice Areas (expands submenu)
   └─ Hong Kong Tax & Trusts     → /hong-kong-tax-trusts
 Clerks & Practice Managers  → /clerks
 Who I Help                  → /#who-i-help  (scrolls to homepage section)
+How to Instruct Us          → /how-to-instruct-us
 About (expands submenu)
-  ├─ About - The Barrister's Clerk → /about
-  ├─ How to Instruct Us       → /how-to-instruct-us
+  ├─ The Barrister's Clerk    → /about
+  ├─ Tyroon Win               → /tyroon-win
   └─ Fees                     → /fees
 News & Resources (expands submenu)
   ├─ News                   → /news   ⚠ page not yet built
@@ -561,12 +562,13 @@ Root layout sets `metadataBase` and a title template. Each app also has `sitemap
 
 ### URLs & Routes
 
-#### barristersclerk.co.uk — 21 routes
+#### barristersclerk.co.uk — 22 routes
 
 ```
 /                          Homepage
 /about                     About - The Barrister's Clerk
 /how-to-instruct-us         How to Instruct Us
+/tyroon-win                 Tyroon Win (bio)
 /clerks                     Clerks & Practice Managers
 /lawyers                    For Lawyers & Law Firms
 /licensed-access            For Licensed Access Clients
@@ -634,7 +636,7 @@ Plus auto-generated: `/sitemap.xml`, `/robots.txt`, `/api/contact`.
 - Licensed Access → `/licensed-access`
 - Members of the Public → `/public-access`
 
-**Testimonials section title:** "Barristers Recognised in Chambers & Partners and Legal 500"
+**Testimonials section title:** "What the Directories Say"
 
 **Contact CTA:**
 
@@ -652,9 +654,13 @@ Positioning page for The Barrister's Clerk (no personal bio). Sections: About, W
 
 Standalone guidance page covering instruction process, initial information required, compliance/ID checks, fees & timescales, and terms of engagement.
 
+#### Tyroon Win (`/tyroon-win`)
+
+Dedicated personal bio page with career timeline, profile image, and testimonials.
+
 #### Clerks & Practice Managers (`/clerks`)
 
-Listing page (parallel to Barristers listing). Currently includes Tyroon Win with profile link to `/about`, designed to be extended with additional clerk profiles.
+Listing page (parallel to Barristers listing). Currently includes Tyroon Win with profile link to `/tyroon-win`, designed to be extended with additional clerk profiles.
 
 #### For Lawyers (`/lawyers`)
 
@@ -949,6 +955,6 @@ Vercel automatically provisions SSL certificates. No manual configuration needed
 
 ---
 
-_Documentation Version: 3.2_
+_Documentation Version: 3.3_
 _Last Updated: 10 April 2026_
 _Project: Tyroon Win Barrister Clerk Websites_
