@@ -1,9 +1,9 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 const clientTypeLabels: Record<string, string> = {
-  lawyer: 'Lawyer / Law Firm',
-  licensed: 'Licensed Access Professional',
-  public: 'Member of the Public',
+  lawyer: "Lawyer / Law Firm",
+  licensed: "Licensed Access Professional",
+  public: "Member of the Public",
 };
 
 export async function POST(request: Request) {
@@ -15,27 +15,27 @@ export async function POST(request: Request) {
     // Basic server-side validation
     if (!name || !email || !clientType || !message) {
       return NextResponse.json(
-        { success: false, error: 'Missing required fields' },
-        { status: 400 }
+        { success: false, error: "Missing required fields" },
+        { status: 400 },
       );
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { success: false, error: 'Invalid email address' },
-        { status: 400 }
+        { success: false, error: "Invalid email address" },
+        { status: 400 },
       );
     }
 
     // Log the submission (in production, you'd send an email here via nodemailer, Resend, etc.)
-    console.log('Contact form submission:', {
+    console.log("Contact form submission:", {
       name,
       email,
-      phone: phone || 'Not provided',
+      phone: phone || "Not provided",
       clientType: clientTypeLabels[clientType] || clientType,
       message,
-      site: 'barristersclerk.co.uk',
+      site: "barristersclerk.co.uk",
       timestamp: new Date().toISOString(),
     });
 
@@ -45,17 +45,20 @@ export async function POST(request: Request) {
     // const resend = new Resend(process.env.RESEND_API_KEY);
     // await resend.emails.send({
     //   from: 'noreply@barristersclerk.co.uk',
-    //   to: 'tyroon.win@barristersclerk.co.uk',
+    //   to: 'tyroon.win@thebarristersclerk.com',
     //   subject: `New enquiry from ${name} (${clientTypeLabels[clientType]})`,
     //   text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nType: ${clientTypeLabels[clientType]}\n\nMessage:\n${message}`,
     // });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error("Contact form error:", error);
     return NextResponse.json(
-      { success: false, error: 'Failed to process your message. Please try again.' },
-      { status: 500 }
+      {
+        success: false,
+        error: "Failed to process your message. Please try again.",
+      },
+      { status: 500 },
     );
   }
 }

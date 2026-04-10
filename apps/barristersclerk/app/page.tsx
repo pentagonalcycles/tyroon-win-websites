@@ -77,7 +77,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
-              What the Directories Say
+              Barristers Recognised in Chambers &amp; Partners and Legal 500
             </h2>
             <p className="text-gray-600">
               Recognised by leading legal directories for responsiveness and
@@ -123,11 +123,11 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
               <a
-                href="mailto:tyroon.win@barristersclerk.co.uk"
+                href="mailto:tyroon.win@thebarristersclerk.com"
                 className="flex items-center space-x-2 text-white/90 hover:text-accent transition-colors"
               >
                 <Mail className="h-5 w-5" />
-                <span>tyroon.win@barristersclerk.co.uk</span>
+                <span>tyroon.win@thebarristersclerk.com</span>
               </a>
               <a
                 href="tel:02074302005"

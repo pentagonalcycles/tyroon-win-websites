@@ -109,10 +109,10 @@ export default function LawyersPage() {
                     <div>
                       <p className="font-medium text-gray-700 mb-1">Email</p>
                       <a
-                        href="mailto:tyroon.win@barristersclerk.co.uk"
+                        href="mailto:tyroon.win@thebarristersclerk.com"
                         className="text-primary hover:text-primary-dark transition-colors break-all"
                       >
-                        tyroon.win@barristersclerk.co.uk
+                        tyroon.win@thebarristersclerk.com
                       </a>
                     </div>
                     <div>

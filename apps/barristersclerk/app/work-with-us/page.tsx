@@ -157,10 +157,10 @@ export default function WorkWithUsPage() {
                     <p>
                       <span className="font-medium">Email: </span>
                       <a
-                        href="mailto:tyroon.win@barristersclerk.co.uk"
+                        href="mailto:tyroon.win@thebarristersclerk.com"
                         className="text-accent hover:text-white"
                       >
-                        tyroon.win@barristersclerk.co.uk
+                        tyroon.win@thebarristersclerk.com
                       </a>
                     </p>
                     <p>

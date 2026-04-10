@@ -173,7 +173,7 @@ export default function SimonJelfPage() {
                     <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
                     Simon is a client-friendly, calm and poised advocate, who
                     always has an eye for the commercial and pragmatic solution.
-                    He is a genuine expert.
+                    &quot;&quot;He is a genuine expert.&quot;
                   </blockquote>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function SimonJelfPage() {
                   </blockquote>
                   <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
                     <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />
-                    &hellip; warmly endorsed by clients for his clear advice.
+                    &hellip; warmley endorsed by clients for his clear advice.
                   </blockquote>
                   <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">
                     <Quote className="absolute -left-1.5 -top-1 h-3 w-3 text-accent" />

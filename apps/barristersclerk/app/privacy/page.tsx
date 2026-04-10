@@ -214,7 +214,7 @@ export default function PrivacyPage() {
                 please contact:
               </p>
               <div className="text-gray-700 text-sm space-y-1">
-                <p>Email: tyroon.win@barristersclerk.co.uk</p>
+                <p>Email: tyroon.win@thebarristersclerk.com</p>
                 <p>Phone: 020 7430 2005</p>
               </div>
             </div>

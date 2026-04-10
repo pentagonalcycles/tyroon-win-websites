@@ -69,32 +69,6 @@ const specialistTax = [
   "Customs and excise duties",
 ];
 
-const hongKongPersonal = [
-  "Hong Kong personal tax planning for residents and expatriates",
-  "Estate planning and succession advice within Hong Kong law",
-  "Cross-border personal tax structuring and compliance",
-  "Tax-efficient management of family wealth and trusts",
-];
-
-const hongKongCorporate = [
-  "Corporate tax advisory, profit allocation, and director/shareholder remuneration",
-  "Structuring and taxation of investment vehicles, funds, and LLPs operating across jurisdictions",
-  "Cross-border tax planning integrating Hong Kong, UK, and other jurisdictions",
-];
-
-const hongKongTrusts = [
-  "Advising on the creation, administration, and governance of trusts",
-  "International and family trust structuring",
-  "Tax-efficient estate planning for high-net-worth clients",
-  "Trust-related succession and compliance matters",
-];
-
-const hongKongDisputes = [
-  "Representation before the Hong Kong Inland Revenue Department and tax tribunals",
-  "Handling complex cross-border disputes and tax investigations",
-  "Strategic advice to minimise risk and protect assets",
-];
-
 export default function TaxPage() {
   const tc = taxAppealsContent;
 
@@ -242,51 +216,20 @@ export default function TaxPage() {
               </div>
             </div>
 
-            {/* Hong Kong Tax & Trusts */}
-            <div>
+            <div className="bg-cream rounded-2xl p-8 border border-accent/20">
               <h2 className="font-heading text-2xl font-bold text-gray-900 mb-4">
                 Hong Kong Tax &amp; Trusts
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Our barristers provide expert advice on complex Hong Kong and
-                cross-border tax matters, trusts, and estate planning. They are
-                regularly instructed by high-net-worth individuals,
-                international businesses, and professional advisers requiring
-                authoritative guidance on Hong Kong tax law and trust
-                structures.
+                For Hong Kong tax and trusts matters, including cross-border
+                structuring and disputes, see our dedicated page.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                  <h3 className="font-heading font-semibold text-primary mb-3">
-                    Personal &amp; Private Client Tax
-                  </h3>
-                  <CheckList items={hongKongPersonal} />
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                  <h3 className="font-heading font-semibold text-primary mb-3">
-                    Corporate &amp; Business Tax
-                  </h3>
-                  <CheckList items={hongKongCorporate} />
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                  <h3 className="font-heading font-semibold text-primary mb-3">
-                    Trusts &amp; Estate Planning
-                  </h3>
-                  <CheckList items={hongKongTrusts} />
-                </div>
-                <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                  <h3 className="font-heading font-semibold text-primary mb-3">
-                    Dispute Resolution
-                  </h3>
-                  <CheckList items={hongKongDisputes} />
-                </div>
-              </div>
-              <p className="text-gray-700 leading-relaxed italic">
-                Our barristers combine technical expertise with a practical,
-                commercially focused approach, ensuring that transactions,
-                structures, and dispute strategies are carefully tailored to
-                your objectives.
-              </p>
+              <Link
+                href="/hong-kong-tax-trusts"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary-dark transition-colors"
+              >
+                View Hong Kong Tax &amp; Trusts
+              </Link>
             </div>
 
             {/* CTA */}

@@ -127,7 +127,7 @@ export default function StefanoMarianiPage() {
               {/* Chambers Greater China 2022 */}
               <div className="bg-cream rounded-2xl p-6 border border-accent/20">
                 <p className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
-                  Chambers Greater China Region (2022)
+                  Chambers greater China region 2022.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   Stefano is able to provide advice about complex points of law.
@@ -139,7 +139,7 @@ export default function StefanoMarianiPage() {
               {/* Legal 500 Asia Pacific 2022 — HK IRD */}
               <div className="bg-cream rounded-2xl p-6 border border-accent/20">
                 <p className="text-xs font-semibold uppercase tracking-wide text-accent mb-3">
-                  Legal 500 Asia Pacific (2022)
+                  Legal 500 Asia pacific 2022.
                 </p>
                 <div className="space-y-3">
                   <blockquote className="relative pl-5 border-l-2 border-accent text-gray-700 italic leading-relaxed">

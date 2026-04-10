@@ -25,7 +25,7 @@ const steps = [
     step: 3,
     title: "Submit a Formal Written Complaint",
     content:
-      "Provide your name and contact details, who you are complaining about, full details of the complaint, and the outcome you are seeking. Send to: tyroon.win@barristersclerk.co.uk",
+      "Provide your name and contact details, who you are complaining about, full details of the complaint, and the outcome you are seeking. Send to: tyroon.win@thebarristersclerk.com",
   },
   {
     step: 4,
@@ -174,7 +174,7 @@ export default function ComplaintsPage() {
                   Contact Us
                 </Link>
                 <a
-                  href="mailto:tyroon.win@barristersclerk.co.uk"
+                  href="mailto:tyroon.win@thebarristersclerk.com"
                   className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors"
                 >
                   Email Us

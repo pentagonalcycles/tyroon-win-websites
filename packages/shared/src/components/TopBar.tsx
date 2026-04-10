@@ -6,7 +6,7 @@ import { Menu, X, Mail, ChevronDown } from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
 
 const clerksDropdown = [
-  { label: "All Clerks & Practice Managers", href: "/lawyers" },
+  { label: "All Clerks & Practice Managers", href: "/clerks" },
   { label: "Tyroon Win", href: "/about" },
 ];
 
@@ -14,6 +14,13 @@ const barristersDropdown = [
   { label: "All Barristers", href: "/barristers" },
   { label: "Simon Jelf", href: "/barristers/simon-jelf" },
   { label: "Stefano Mariani", href: "/barristers/stefano-mariani" },
+];
+
+const practiceAreasDropdown = [
+  { label: "Partnership & LLP", href: "/partnership" },
+  { label: "Mediation", href: "/mediation" },
+  { label: "Tax", href: "/tax" },
+  { label: "Hong Kong Tax & Trusts", href: "/hong-kong-tax-trusts" },
 ];
 
 export function TopBar() {
@@ -59,12 +66,24 @@ export function TopBar() {
               >
                 Home
               </Link>
-              <Link
-                href="/tax"
-                className="text-sm text-white hover:text-accent transition-colors"
-              >
-                Tax
-              </Link>
+              {/* Practice Areas dropdown */}
+              <div className="relative group">
+                <button className="flex items-center space-x-1 text-sm text-white hover:text-accent transition-colors">
+                  <span>Practice Areas</span>
+                  <ChevronDown className="h-3.5 w-3.5 group-hover:rotate-180 transition-transform duration-200" />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-56 bg-primary-dark border border-primary-light/30 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  {practiceAreasDropdown.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2.5 text-sm text-white/80 hover:text-accent hover:bg-primary-light/20 first:rounded-t-lg last:rounded-b-lg transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               {/* Barristers dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-sm text-white hover:text-accent transition-colors">
@@ -102,7 +121,7 @@ export function TopBar() {
                 </div>
               </div>
               <a
-                href="mailto:tyroon.win@barristersclerk.co.uk"
+                href="mailto:tyroon.win@thebarristersclerk.com"
                 className="text-white hover:text-accent transition-colors"
                 aria-label="Email"
               >

@@ -46,7 +46,7 @@ const sections = [
   {
     title: "7. Contact",
     content:
-      "For questions about our use of cookies, please contact us at tyroon.win@barristersclerk.co.uk.",
+      "For questions about our use of cookies, please contact us at tyroon.win@thebarristersclerk.com.",
   },
 ];
 

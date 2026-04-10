@@ -25,7 +25,7 @@ const siteConfigs = {
     name: "Tyroon Win",
     subtitle: "Barristers Clerk",
     domain: "barristersclerk.co.uk",
-    email: "tyroon.win@barristersclerk.co.uk",
+    email: "tyroon.win@thebarristersclerk.com",
     phone: "020 7430 2005",
     mobile: "07751 022914",
     bgClass: "bg-primary-dark",
@@ -35,7 +35,7 @@ const siteConfigs = {
     borderClass: "border-primary-light/30",
     practiceLinks: [
       { label: "Partnership & LLP", href: "/partnership" },
-      { label: "Tax Appeals", href: "/tax" },
+      { label: "Tax", href: "/tax" },
     ],
   },
   taxclerk: {

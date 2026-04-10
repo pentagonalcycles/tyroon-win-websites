@@ -1,8 +1,23 @@
 # Next Steps
 
-## Current Status (April 9, 2026)
+## Current Status (April 10, 2026)
 
 All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
+
+### Client Feedback Fixes (April 10, 2026)
+
+- **Global email update**: Replaced `tyroon.win@barristersclerk.co.uk` with `tyroon.win@thebarristersclerk.com` across barristersclerk pages/components and contact API comments.
+- **About page replaced**: `/about` now presents "About - The Barrister's Clerk" (service-focused positioning) and no longer contains Tyroon's personal bio content.
+- **New page**: `/how-to-instruct-us` created as a standalone guidance page; MegaMenu About submenu updated to use it and remove Client Care.
+- **New page**: `/clerks` created as a listing page for Clerks & Practice Managers (currently Tyroon Win, extensible for additional clerks).
+- **TopBar navigation**: Replaced direct "Tax" link with a **Practice Areas** dropdown: Partnership & LLP, Mediation, Tax, Hong Kong Tax & Trusts.
+- **MegaMenu Practice Areas**: Simplified entries by removing deep subheadings for Partnership and Tax; now direct links for Partnership & LLP and Tax, plus Mediation and Hong Kong Tax & Trusts.
+- **Tax structure split**: Moved Hong Kong content off `/tax` to new dedicated `/hong-kong-tax-trusts` page; `/tax` now links to it.
+- **Homepage directories heading**: Updated to "Barristers Recognised in Chambers & Partners and Legal 500".
+- **Profile quote copy updates**: Refined Simon and Stefano directory quote text/source labels per latest client wording.
+- **Footer**: Practice Areas label changed from "Tax Appeals" to "Tax".
+- **Newsroom social**: LinkedIn URL updated to `https://www.linkedin.com/company/the-barrister-s-clerk/?viewAsMember=true`.
+- **Sitemap**: Added `/how-to-instruct-us`, `/clerks`, and `/hong-kong-tax-trusts`.
 
 ### Navigation — Tax link added (April 9, 2026)
 

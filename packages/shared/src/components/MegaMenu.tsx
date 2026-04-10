@@ -33,29 +33,26 @@ const menuData: MenuItem[] = [
     children: [
       {
         label: "Partnership & LLP",
-        children: [
-          { label: "Partnership Disputes", href: "/partnership" },
-          { label: "LLP Agreements", href: "/partnership" },
-          { label: "Member Exits", href: "/partnership" },
-        ],
+        href: "/partnership",
       },
       {
         label: "Dispute Resolution",
         children: [{ label: "Mediation", href: "/mediation" }],
       },
       {
-        label: "Tax Appeals",
-        children: [
-          { label: "HMRC Disputes", href: "/tax" },
-          { label: "Tribunal Representation", href: "/tax" },
-          { label: "Tax Investigations", href: "/tax" },
-        ],
+        label: "Tax",
+        href: "/tax",
+      },
+      {
+        label: "Hong Kong Tax & Trusts",
+        href: "/hong-kong-tax-trusts",
       },
     ],
   },
+
   {
-    label: "Tax",
-    href: "/tax",
+    label: "Clerks & Practice Managers",
+    href: "/clerks",
   },
   {
     label: "Who I Help",
@@ -65,8 +62,7 @@ const menuData: MenuItem[] = [
     label: "About",
     children: [
       { label: "About Tyroon Win", href: "/about" },
-      { label: "How to Instruct", href: "/contact" },
-      { label: "Client Care", href: "/about#client-care" },
+      { label: "How to Instruct Us", href: "/how-to-instruct-us" },
       { label: "Fees", href: "/fees" },
     ],
   },

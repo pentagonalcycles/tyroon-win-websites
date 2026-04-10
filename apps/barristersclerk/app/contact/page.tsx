@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
-import { Mail, Phone, Smartphone, Clock, MapPin } from 'lucide-react';
-import { PageHero, Section, Container, ContactForm } from '@tyroon/shared';
+import type { Metadata } from "next";
+import { Mail, Phone, Smartphone, Clock, MapPin } from "lucide-react";
+import { PageHero, Section, Container, ContactForm } from "@tyroon/shared";
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: "Contact",
   description:
-    'Get in touch with Tyroon Win to discuss your matter, check barrister availability, or request a fee estimate. I aim to respond within 24 hours.',
+    "Get in touch with Tyroon Win to discuss your matter, check barrister availability, or request a fee estimate. I aim to respond within 24 hours.",
 };
 
 export default function ContactPage() {
@@ -28,8 +28,8 @@ export default function ContactPage() {
                   Send a Message
                 </h2>
                 <p className="text-gray-600 mb-8">
-                  Whether you are a lawyer, professional, or member of the public, I am happy to
-                  discuss your options.
+                  Whether you are a lawyer, professional, or member of the
+                  public, I am happy to discuss your options.
                 </p>
                 <ContactForm site="barristersclerk" />
               </div>
@@ -46,12 +46,14 @@ export default function ContactPage() {
                         <Mail className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-0.5">Email</p>
+                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-0.5">
+                          Email
+                        </p>
                         <a
-                          href="mailto:tyroon.win@barristersclerk.co.uk"
+                          href="mailto:tyroon.win@thebarristersclerk.com"
                           className="text-primary hover:text-primary-dark transition-colors text-sm break-all"
                         >
-                          tyroon.win@barristersclerk.co.uk
+                          tyroon.win@thebarristersclerk.com
                         </a>
                       </div>
                     </div>
@@ -60,7 +62,9 @@ export default function ContactPage() {
                         <Phone className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-0.5">Phone</p>
+                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-0.5">
+                          Phone
+                        </p>
                         <a
                           href="tel:02074302005"
                           className="text-primary hover:text-primary-dark transition-colors text-sm"
@@ -74,7 +78,9 @@ export default function ContactPage() {
                         <Smartphone className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-0.5">Mobile</p>
+                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-0.5">
+                          Mobile
+                        </p>
                         <a
                           href="tel:07751022914"
                           className="text-primary hover:text-primary-dark transition-colors text-sm"
@@ -88,18 +94,25 @@ export default function ContactPage() {
                         <Clock className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-0.5">Office Hours</p>
+                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-0.5">
+                          Office Hours
+                        </p>
                         <p className="text-gray-700 text-sm">Monday – Friday</p>
-                        <p className="text-gray-700 text-sm">9:00 AM – 6:00 PM</p>
+                        <p className="text-gray-700 text-sm">
+                          9:00 AM – 6:00 PM
+                        </p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-cream rounded-2xl p-6 border border-accent/20">
-                  <p className="text-sm text-gray-700 font-medium mb-1">Response Time</p>
+                  <p className="text-sm text-gray-700 font-medium mb-1">
+                    Response Time
+                  </p>
                   <p className="text-sm text-gray-600">
-                    I aim to respond to all enquiries within 24 hours during business days.
+                    I aim to respond to all enquiries within 24 hours during
+                    business days.
                   </p>
                 </div>
               </div>

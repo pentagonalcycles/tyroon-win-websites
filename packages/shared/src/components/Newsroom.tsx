@@ -135,7 +135,7 @@ export function Newsroom() {
               Follow us on social media
             </span>
             <a
-              href="https://www.linkedin.com/company/tyroon-win"
+              href="https://www.linkedin.com/company/the-barrister-s-clerk/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-accent transition-colors"
