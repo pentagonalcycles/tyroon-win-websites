@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tax",
     "/hong-kong-tax-trusts",
     "/barristers",
+    "/resources",
     "/barristers/simon-jelf",
     "/barristers/stefano-mariani",
     "/fees",

@@ -72,10 +72,7 @@ const menuData: MenuItem[] = [
   },
   {
     label: "News & Resources",
-    children: [
-      { label: "News", href: "/news" },
-      { label: "Articles", href: "/news?filter=articles" },
-    ],
+    children: [{ label: "Resources", href: "/resources" }],
   },
   {
     label: "Work With Us",

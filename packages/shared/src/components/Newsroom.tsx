@@ -17,13 +17,14 @@ interface NewsArticle {
 const placeholderArticles: NewsArticle[] = [
   {
     id: "1",
-    title: "Barristers Recognised in Legal 500 Rankings",
-    category: "Directories",
+    title:
+      "Our Barristers Recognised in Chambers & Partners and the Legal 500 Rankings",
+    category: "Our Barristers",
     date: "March 2026",
     image: "/images/news-1.jpg",
     excerpt:
       "Our barristers have been recognised for excellence in Tax and Partnership law.",
-    href: "/news/legal500-2026",
+    href: "/barristers",
   },
   {
     id: "2",

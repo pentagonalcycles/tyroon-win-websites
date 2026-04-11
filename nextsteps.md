@@ -1,8 +1,17 @@
 # Next Steps
 
-## Current Status (April 10, 2026)
+## Current Status (April 11, 2026)
 
 All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
+
+### Client Feedback Fixes (April 11, 2026)
+
+- **Homepage featured card updated**: In Newsroom, the featured item now reads "Our Barristers Recognised in Chambers & Partners and the Legal 500 Rankings" with category "Our Barristers".
+- **Homepage featured CTA target fixed**: The featured "Read More" link now routes to `/barristers`.
+- **New page**: `/resources` created as a starter reference hub for future content such as tax terminology, court addresses, and guidance notes.
+- **Navigation update**: MegaMenu "News & Resources" now links to Resources (`/resources`) instead of unbuilt News routes.
+- **Footer update**: Added "Resources" to Quick Links.
+- **Sitemap update**: Added `/resources`.
 
 ### Follow-up Revisions (April 10, 2026)
 

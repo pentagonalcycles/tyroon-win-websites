@@ -60,6 +60,7 @@ const quickLinks = [
   { label: "Licensed Access", href: "/licensed-access" },
   { label: "Members of the Public", href: "/public-access" },
   { label: "Our Barristers", href: "/barristers" },
+  { label: "Resources", href: "/resources" },
   { label: "Fees", href: "/fees" },
   { label: "Work With Us", href: "/work-with-us" },
   { label: "Contact", href: "/contact" },

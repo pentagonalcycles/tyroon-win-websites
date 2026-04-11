@@ -298,8 +298,7 @@ About (expands submenu)
   ├─ Tyroon Win               → /tyroon-win
   └─ Fees                     → /fees
 News & Resources (expands submenu)
-  ├─ News                   → /news   ⚠ page not yet built
-  └─ Articles               → /news?filter=articles   ⚠ page not yet built
+  └─ Resources              → /resources
 Work With Us                → /work-with-us
 Contact                     → /contact
 Legal (expands submenu)
@@ -309,7 +308,7 @@ Legal (expands submenu)
   └─ Complaints             → /complaints
 ```
 
-> **Note:** The `/news` route does not yet exist in the barristersclerk app. The MegaMenu links to it but it will 404 until the page is built.
+> **Note:** MegaMenu now links to `/resources` under News & Resources.
 
 > **Bug fix (April 2026):** `handleCategoryClick` previously short-circuited categories with flat children (no grandchildren) by calling `onClose()` immediately. This caused "Barristers", "Who I Help", and "Legal" to close the menu with no action. Fixed by removing the short-circuit — all categories now correctly expand their submenu.
 
@@ -472,10 +471,10 @@ export function Newsroom(): JSX.Element;
 // Featured article: large left column
 // 3 other articles: 2-column right grid
 // Social media links: LinkedIn, Instagram
-// "View All News & Articles" → /news  ⚠ page not yet built
+// "View All News & Articles" → /news  ⚠ page not yet built (button retained as placeholder)
 ```
 
-Placeholder articles are hard-coded; replace with CMS data when a `/news` page is built.
+Placeholder articles are hard-coded; featured card currently links to `/barristers` and can be replaced with CMS data when a dedicated `/news` page is built.
 
 #### TestimonialCarousel
 
@@ -562,7 +561,7 @@ Root layout sets `metadataBase` and a title template. Each app also has `sitemap
 
 ### URLs & Routes
 
-#### barristersclerk.co.uk — 22 routes
+#### barristersclerk.co.uk — 23 routes
 
 ```
 /                          Homepage
@@ -578,6 +577,7 @@ Root layout sets `metadataBase` and a title template. Each app also has `sitemap
 /tax                        Tax
 /hong-kong-tax-trusts       Hong Kong Tax & Trusts
 /barristers                 All Barrister Profiles
+/resources                  Resources hub
 /barristers/simon-jelf      Simon Jelf — Partnership & LLP Barrister
 /barristers/stefano-mariani Stefano Mariani — Tax Barrister
 /fees                       Fee Information
@@ -591,7 +591,7 @@ Root layout sets `metadataBase` and a title template. Each app also has `sitemap
 
 Plus auto-generated: `/sitemap.xml`, `/robots.txt`, `/api/contact` (POST endpoint).
 
-> **Missing:** `/news` is referenced in the MegaMenu and Newsroom component but has not been built yet.
+> **Missing:** A dedicated `/news` page is still not built; the homepage still includes a "View All News & Articles" placeholder button that points to `/news`.
 
 #### taxclerk.co.uk — 10 routes
 
@@ -944,7 +944,7 @@ Vercel automatically provisions SSL certificates. No manual configuration needed
 
 | Item                 | Detail                                                                                                                                                                 |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/news` page         | MegaMenu and Newsroom both link to `/news` and `/news?filter=articles`. Neither page exists yet. Links currently 404.                                                  |
+| `/news` page         | MegaMenu no longer links to `/news`; however, the homepage Newsroom footer button still points to `/news` as a placeholder and will 404 until a news page is built.    |
 | Newsroom data        | `Newsroom.tsx` uses hard-coded placeholder articles. Needs a CMS or content layer when the news page is built.                                                         |
 | taxclerk legal pages | `/cookie-policy`, `/terms`, and `/complaints` exist on barristersclerk but not taxclerk. Add if required.                                                              |
 | Contact form email   | `/api/contact` endpoint exists but email delivery not wired up. Needs `RESEND_API_KEY` env var in Vercel.                                                              |
@@ -955,6 +955,6 @@ Vercel automatically provisions SSL certificates. No manual configuration needed
 
 ---
 
-_Documentation Version: 3.3_
-_Last Updated: 10 April 2026_
+_Documentation Version: 3.4_
+_Last Updated: 11 April 2026_
 _Project: Tyroon Win Barrister Clerk Websites_
