@@ -40,7 +40,7 @@ export default function ResourcesPage() {
           <div className="max-w-4xl mx-auto space-y-8">
             <p className="text-gray-700 leading-relaxed">
               This page is set up as a central resource hub. Additional
-              materials can be added here over time, including terminology
+              materials will be added here over time, including terminology
               glossaries, court information, and supporting reference documents.
             </p>
 

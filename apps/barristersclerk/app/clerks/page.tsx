@@ -36,7 +36,7 @@ export default function ClerksPage() {
             <div className="max-w-3xl mb-10">
               <p className="text-lg text-gray-700 leading-relaxed">
                 This page lists clerks and practice managers available through
-                this website. Additional profiles can be added as the team
+                this website. Additional profiles will be added as the team
                 grows.
               </p>
             </div>
