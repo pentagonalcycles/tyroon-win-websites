@@ -1,8 +1,13 @@
 # Next Steps
 
-## Current Status (April 11, 2026)
+## Current Status (April 13, 2026)
 
 All changes below apply to **barristersclerk.co.uk only**. taxclerk.co.uk has not been touched.
+
+### Client Feedback Fixes (April 13, 2026)
+
+- **Resources page expanded**: `/resources` now contains a full "Guide to UK Tax Acronyms" with grouped glossary sections, concise definitions, and expanded notes for key litigation/anti-avoidance terms.
+- **Homepage social update**: Removed the Instagram icon/link from the Newsroom social row on the homepage; LinkedIn remains.
 
 ### Client Feedback Fixes (April 11, 2026)
 

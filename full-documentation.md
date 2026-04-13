@@ -470,7 +470,7 @@ export function Newsroom(): JSX.Element;
 // Dark background section with optional bg image (newsroom-bg.jpg)
 // Featured article: large left column
 // 3 other articles: 2-column right grid
-// Social media links: LinkedIn, Instagram
+// Social media links: LinkedIn
 // "View All News & Articles" → /news  ⚠ page not yet built (button retained as placeholder)
 ```
 
@@ -577,7 +577,7 @@ Root layout sets `metadataBase` and a title template. Each app also has `sitemap
 /tax                        Tax
 /hong-kong-tax-trusts       Hong Kong Tax & Trusts
 /barristers                 All Barrister Profiles
-/resources                  Resources hub
+/resources                  Guide to UK Tax Acronyms (resource page)
 /barristers/simon-jelf      Simon Jelf — Partnership & LLP Barrister
 /barristers/stefano-mariani Stefano Mariani — Tax Barrister
 /fees                       Fee Information
@@ -955,6 +955,6 @@ Vercel automatically provisions SSL certificates. No manual configuration needed
 
 ---
 
-_Documentation Version: 3.4_
-_Last Updated: 11 April 2026_
+_Documentation Version: 3.5_
+_Last Updated: 13 April 2026_
 _Project: Tyroon Win Barrister Clerk Websites_
